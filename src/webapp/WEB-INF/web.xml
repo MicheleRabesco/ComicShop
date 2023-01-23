@@ -8,7 +8,7 @@
     <welcome-file>Homepage.jsp</welcome-file>
   </welcome-file-list>
   <resource-ref>
-    <description>JNDI reference to a data source</description>
+    <description>DB Connection</description>
     <res-ref-name>jdbc/comicshop</res-ref-name>
     <res-type>javax.sql.DataSource</res-type>
     <res-auth>Container</res-auth>

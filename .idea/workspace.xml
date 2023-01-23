@@ -10,73 +10,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d841be6c-b30e-46e3-9553-5476539edc8b" name="Changes" comment="Now it is possible to deploy">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/it/unisa/control/AddressControl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/it/unisa/control/AdminFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/it/unisa/control/Catalogo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/it/unisa/control/CatalogueUpdate.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/it/unisa/control/CheckOutServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/it/unisa/control/LoginFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/it/unisa/control/LoginServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/it/unisa/control/Logout.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/it/unisa/control/OrderArchiveServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/it/unisa/control/OrderHistoryServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/it/unisa/control/OrdineControl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/it/unisa/control/PaymentMethodControl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/it/unisa/control/ProductControl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/it/unisa/control/UserControl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/it/unisa/control/UserPageServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/it/unisa/control/UserUpdateServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/it/unisa/control/Visibility.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/it/unisa/control/utilities/DatabaseConnection.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/it/unisa/control/validation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/it/unisa/model/AddressBean.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/it/unisa/model/AddressDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/it/unisa/model/Cart.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/it/unisa/model/ContentBean.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/it/unisa/model/ItemOrder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/it/unisa/model/OrderBean.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/it/unisa/model/OrderDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/it/unisa/model/PaymentMethodBean.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/it/unisa/model/PaymentMethodDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/it/unisa/model/PhotoBean.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/it/unisa/model/PhotoDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/it/unisa/model/ProductBean.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/it/unisa/model/ProductDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/it/unisa/model/ProductModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/it/unisa/model/UserBean.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/it/unisa/model/UserDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/webapp/AccessDenied.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/webapp/AddressRegistration.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/webapp/Admin/Catalogo.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/webapp/Admin/Ordini.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/webapp/CheckoutPage.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/webapp/Homepage.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/webapp/OrderHistory.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/webapp/PaymentMethodRegistration.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/webapp/RegistrationPage.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/webapp/UserPage.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/webapp/cart.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/webapp/fragments/footer.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/webapp/fragments/header.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/webapp/fragments/headerlogged.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/webapp/js/addresscheck.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/webapp/js/catalogo.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/webapp/js/checkout.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/webapp/js/login.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/webapp/js/methodcheck.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/webapp/js/photo.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/webapp/js/registration.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/webapp/loginPage.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/webapp/orderDetails.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/webapp/productDetails.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/webapp/style/error.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/webapp/style/footerStyle.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/webapp/style/headerStyle.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/webapp/style/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unisa/control/utilities/DatabaseConnection.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/webapp/WEB-INF/web.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,6 +23,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Tag Library Descriptor" />
         <option value="Class" />
       </list>
     </option>
@@ -120,6 +58,7 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "last_opened_file_path": "C:/Users/miche/OneDrive/Documenti/GitHub/ComicShop2023/src/webapp",
     "project.structure.last.edited": "Artifacts",
@@ -134,11 +73,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\miche\OneDrive\Documenti\GitHub\ComicShop2023\src\webapp" />
       <recent name="C:\Users\miche\OneDrive\Documenti\GitHub\ComicShop2023\src\webapp\style" />
       <recent name="C:\Users\miche\OneDrive\Documenti\GitHub\ComicShop2023\src\webapp\js" />
       <recent name="C:\Users\miche\OneDrive\Documenti\GitHub\ComicShop2023\src\webapp\fragments" />
       <recent name="C:\Users\miche\OneDrive\Documenti\GitHub\ComicShop2023\src\webapp\Admin" />
-      <recent name="C:\Users\miche\OneDrive\Documenti\GitHub\ComicShop2023\src\webapp" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\miche\OneDrive\Documenti\GitHub\ComicShop2023\src" />
@@ -256,7 +195,7 @@
       <option name="presentableId" value="Default" />
       <updated>1674482230025</updated>
       <workItem from="1674482233022" duration="3609000" />
-      <workItem from="1674490835777" duration="1777000" />
+      <workItem from="1674490835777" duration="5281000" />
     </task>
     <servers />
   </component>
