@@ -67,7 +67,8 @@
     "project.structure.last.edited": "Facets",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.31494254",
-    "settings.editor.selected.configurable": "preferences.lookFeel"
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "sql.rename.search.for.storage.occurrences": "true"
   },
   "keyToStringList": {
     "DatabaseDriversLRU": [
@@ -204,7 +205,7 @@
       <workItem from="1674500480776" duration="692000" />
       <workItem from="1674501212688" duration="1403000" />
       <workItem from="1674502655144" duration="656000" />
-      <workItem from="1674503355724" duration="839000" />
+      <workItem from="1674503355724" duration="1098000" />
     </task>
     <servers />
   </component>
