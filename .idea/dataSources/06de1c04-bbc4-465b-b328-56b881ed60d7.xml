@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<dataSource name="comicshop@localhost">
+<dataSource name="comicshop">
   <database-model serializer="dbm" dbms="MYSQL" family-id="MYSQL" format-version="4.43">
     <root id="1">
       <DefaultCasing>lower/lower</DefaultCasing>
@@ -1387,7 +1387,7 @@ cap</ColNames>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <column id="370" parent="294" name="città">
+    <column id="370" parent="294" name="citta">
       <DataType>varchar(45)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>4</Position>

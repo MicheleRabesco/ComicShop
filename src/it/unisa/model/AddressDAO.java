@@ -54,7 +54,7 @@ public class AddressDAO {
 				bean.setVia(rs.getString("via"));
 				bean.setNumero_civico(rs.getInt("numero_civico"));
 				bean.setCap(rs.getInt("cap"));
-				bean.setCitta(rs.getString("città"));
+				bean.setCitta(rs.getString("citta"));
 				bean.setProvincia(rs.getString("provincia"));
 				addresses.add(bean);
 
@@ -75,7 +75,7 @@ public class AddressDAO {
 		PreparedStatement preparedStatement = null;
 
 		String insertSQL = "INSERT INTO " + TABLE_NAME3
-				+ " (via,numero_civico,cap,citt�,provincia ) VALUES (?, ?, ?,?,?)";
+				+ " (via,numero_civico,cap,citta,provincia ) VALUES (?, ?, ?,?,?)";
 
 		try {
 			connection = ds.getConnection();
@@ -89,7 +89,7 @@ public class AddressDAO {
 
 		} catch (SQLException ex) {
 			if (ex.getErrorCode() == 1062) {
-				System.out.println("Indirizzo gi� esistente nel DB " + ex);
+				System.out.println("Indirizzo già esistente nel DB " + ex);
 				try {
 					preparedStatement.close();
 
