@@ -9,42 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d841be6c-b30e-46e3-9553-5476539edc8b" name="Changes" comment="Update">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/06de1c04-bbc4-465b-b328-56b881ed60d7.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/06de1c04-bbc4-465b-b328-56b881ed60d7.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unisa/control/AddressControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unisa/control/AddressControl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unisa/control/CatalogueUpdate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unisa/control/CatalogueUpdate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unisa/control/CheckOutServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unisa/control/CheckOutServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unisa/control/PaymentMethodControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unisa/control/PaymentMethodControl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unisa/control/ProductControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unisa/control/ProductControl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unisa/control/UserControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unisa/control/UserControl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unisa/control/UserPageServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unisa/control/UserPageServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unisa/control/UserUpdateServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unisa/control/UserUpdateServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unisa/model/AddressBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unisa/model/AddressBean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unisa/model/AddressDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unisa/model/AddressDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unisa/model/Cart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unisa/model/Cart.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unisa/model/ContentBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unisa/model/ContentBean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unisa/model/OrderBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unisa/model/OrderBean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unisa/model/OrderDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unisa/model/OrderDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unisa/model/PaymentMethodBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unisa/model/PaymentMethodBean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unisa/model/PaymentMethodDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unisa/model/PaymentMethodDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unisa/model/ProductBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unisa/model/ProductBean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unisa/model/ProductDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unisa/model/ProductDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unisa/model/UserBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unisa/model/UserBean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unisa/model/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unisa/model/UserDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/webapp/AddressRegistration.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/webapp/AddressRegistration.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/webapp/Admin/Catalogo.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/webapp/Admin/Catalogo.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/webapp/Admin/Ordini.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/webapp/Admin/Ordini.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/webapp/CheckoutPage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/webapp/CheckoutPage.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/webapp/OrderHistory.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/webapp/OrderHistory.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/webapp/PaymentMethodRegistration.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/webapp/PaymentMethodRegistration.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/webapp/RegistrationPage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/webapp/RegistrationPage.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/webapp/UserPage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/webapp/UserPage.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/webapp/cart.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/webapp/cart.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/webapp/js/registration.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/webapp/js/registration.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/webapp/orderDetails.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/webapp/orderDetails.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/webapp/productDetails.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/webapp/productDetails.jsp" afterDir="false" />
-    </list>
+    <list default="true" id="d841be6c-b30e-46e3-9553-5476539edc8b" name="Changes" comment="Update" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
