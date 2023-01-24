@@ -1,17 +1,19 @@
 package it.unisa.control;
 
-import java.io.IOException;
-import java.util.LinkedList;
-
-import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.*;
 
 import it.unisa.model.Cart;
 import it.unisa.model.ContentBean;
 import it.unisa.model.OrderDAO;
 import it.unisa.model.ProductDAO;
 import it.unisa.model.UserBean;
+import java.io.IOException;
+import java.util.LinkedList;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 @WebServlet("/Ordine")
 public class OrdineControl extends HttpServlet {

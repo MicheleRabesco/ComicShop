@@ -1,8 +1,10 @@
 package it.unisa.control;
 
+import it.unisa.model.PaymentMethodBean;
+import it.unisa.model.PaymentMethodDAO;
+import it.unisa.model.UserBean;
 import java.io.IOException;
 import java.time.LocalDate;
-import it.unisa.model.*;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;

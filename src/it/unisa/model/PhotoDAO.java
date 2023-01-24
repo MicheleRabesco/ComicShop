@@ -9,7 +9,6 @@ import java.sql.ResultSet;
 import java.util.Base64;
 import java.util.LinkedList;
 import java.util.List;
-
 import javax.naming.Context;
 import javax.naming.InitialContext;
 import javax.naming.NamingException;

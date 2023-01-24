@@ -1,10 +1,11 @@
 package it.unisa.control;
 
+import it.unisa.model.OrderBean;
+import it.unisa.model.OrderDAO;
 import java.io.IOException;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
-
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -12,9 +13,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-
-import it.unisa.model.OrderBean;
-import it.unisa.model.OrderDAO;
 
 /**
  * Servlet implementation class OrderArchiveServlet

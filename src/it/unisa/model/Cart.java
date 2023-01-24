@@ -16,7 +16,7 @@ public class Cart {
 
     ItemOrder order;
     for (int i = 1; i <= products.size(); i++) {
-      order = (ItemOrder) products.get(i - 1);
+      order = products.get(i - 1);
       if (order.getId() == itemID) {
         order.incrementNumItems();
         return;
@@ -33,7 +33,7 @@ public class Cart {
   public void deleteProduct(int Id) {
     ItemOrder order;
     for (int i = 0; i < products.size(); i++) {
-      order = (ItemOrder) products.get(i);
+      order = products.get(i);
       if (order.getId() == Id) {
         setNumOrdered(order.getId(), 0);
         return;
@@ -44,7 +44,7 @@ public class Cart {
   public synchronized void setNumOrdered(int Id, int numOrdered) {
     ItemOrder order;
     for (int i = 0; i < products.size(); i++) {
-      order = (ItemOrder) products.get(i);
+      order = products.get(i);
       if (order.getId() == Id) {
         if (numOrdered <= 0) {
           products.remove(i);
@@ -76,7 +76,7 @@ public class Cart {
   public float getTotalCost() {
     float costo_totale = 0;
     for (int i = 0; i < products.size(); i++) {
-      costo_totale += ((ItemOrder) products.get(i)).getTotalCost();
+      costo_totale += products.get(i).getTotalCost();
 
     }
     return costo_totale;
@@ -84,11 +84,7 @@ public class Cart {
 
   public boolean IsEmpty() {
 
-    if (products.isEmpty()) {
-      return true;
-    }
-
-    return false;
+    return products.isEmpty();
 
   }
 

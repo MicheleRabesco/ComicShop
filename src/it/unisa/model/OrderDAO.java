@@ -1,13 +1,17 @@
 package it.unisa.model;
 
+import java.sql.Connection;
+import java.sql.Date;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.time.LocalDate;
+import java.util.LinkedList;
+import java.util.List;
 import javax.naming.Context;
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
 import javax.sql.DataSource;
-import java.sql.*;
-import java.time.LocalDate;
-import java.util.LinkedList;
-import java.util.List;
 
 public class OrderDAO {
   private static final String TABLE_NAME = "ordine";
@@ -135,10 +139,12 @@ public class OrderDAO {
       System.out.println("Error:" + e.getMessage());
     } finally {
       try {
-        if (preparedStatement != null)
+        if (preparedStatement != null) {
           preparedStatement.close();
-        if (connection != null)
+        }
+        if (connection != null) {
           connection.close();
+        }
       } catch (Exception e) {
         System.out.println("Error:" + e.getMessage());
       }
@@ -180,10 +186,12 @@ public class OrderDAO {
     } finally {
 
       try {
-        if (preparedStatement != null)
+        if (preparedStatement != null) {
           preparedStatement.close();
-        if (connection != null)
+        }
+        if (connection != null) {
           connection.close();
+        }
       } catch (Exception e) {
         System.out.println("Errore,impossibile recuperare ordini " + e);
       }
@@ -223,10 +231,12 @@ public class OrderDAO {
     } finally {
 
       try {
-        if (preparedStatement != null)
+        if (preparedStatement != null) {
           preparedStatement.close();
-        if (connection != null)
+        }
+        if (connection != null) {
           connection.close();
+        }
       } catch (Exception e) {
         System.out.println("Errore,impossibile recuperare ordini " + e);
       }
@@ -270,10 +280,12 @@ public class OrderDAO {
     } finally {
 
       try {
-        if (preparedStatement != null)
+        if (preparedStatement != null) {
           preparedStatement.close();
-        if (connection != null)
+        }
+        if (connection != null) {
           connection.close();
+        }
       } catch (Exception e) {
         System.out.println("Errore,impossibile recuperare ordini " + e);
       }
@@ -312,10 +324,12 @@ public class OrderDAO {
       System.out.println("Error:" + e.getMessage());
     } finally {
       try {
-        if (preparedStatement != null)
+        if (preparedStatement != null) {
           preparedStatement.close();
-        if (connection != null)
+        }
+        if (connection != null) {
           connection.close();
+        }
       } catch (Exception e) {
         System.out.println("Error:" + e.getMessage());
       }
@@ -356,10 +370,12 @@ public class OrderDAO {
     } finally {
 
       try {
-        if (preparedStatement != null)
+        if (preparedStatement != null) {
           preparedStatement.close();
-        if (connection != null)
+        }
+        if (connection != null) {
           connection.close();
+        }
       } catch (Exception e) {
         System.out.println("Errore,impossibile recuperare ordini " + e);
       }

@@ -1,12 +1,15 @@
 package it.unisa.model;
 
+import java.sql.Connection;
+import java.sql.Date;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.time.LocalDate;
 import javax.naming.Context;
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
 import javax.sql.DataSource;
-
-import java.sql.*;
-import java.time.LocalDate;
 
 public class UserDAO {
   private static final String TABLE_NAME = "utente";

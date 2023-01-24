@@ -1,12 +1,13 @@
 package it.unisa.control;
 
+import it.unisa.model.UserBean;
+import it.unisa.model.UserDAO;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-import it.unisa.model.*;
-import javax.servlet.annotation.*;
 
 @WebServlet("/Login")
 

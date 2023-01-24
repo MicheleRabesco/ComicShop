@@ -9,7 +9,34 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d841be6c-b30e-46e3-9553-5476539edc8b" name="Changes" comment="Update" />
+    <list default="true" id="d841be6c-b30e-46e3-9553-5476539edc8b" name="Changes" comment="Update">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unisa/control/AddressControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unisa/control/AddressControl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unisa/control/AdminFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unisa/control/AdminFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unisa/control/Catalogo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unisa/control/Catalogo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unisa/control/CatalogueUpdate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unisa/control/CatalogueUpdate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unisa/control/CheckOutServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unisa/control/CheckOutServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unisa/control/LoginFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unisa/control/LoginFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unisa/control/LoginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unisa/control/LoginServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unisa/control/OrderArchiveServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unisa/control/OrderArchiveServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unisa/control/OrderHistoryServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unisa/control/OrderHistoryServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unisa/control/OrdineControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unisa/control/OrdineControl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unisa/control/PaymentMethodControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unisa/control/PaymentMethodControl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unisa/control/ProductControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unisa/control/ProductControl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unisa/control/UserControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unisa/control/UserControl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unisa/control/UserPageServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unisa/control/UserPageServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unisa/control/UserUpdateServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unisa/control/UserUpdateServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unisa/control/Visibility.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unisa/control/Visibility.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unisa/control/validation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unisa/control/validation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unisa/model/AddressDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unisa/model/AddressDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unisa/model/Cart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unisa/model/Cart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unisa/model/OrderDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unisa/model/OrderDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unisa/model/PaymentMethodDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unisa/model/PaymentMethodDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unisa/model/PhotoDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unisa/model/PhotoDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unisa/model/ProductDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unisa/model/ProductDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unisa/model/ProductModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unisa/model/ProductModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unisa/model/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unisa/model/UserDAO.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -60,7 +87,7 @@
     "project.structure.last.edited": "Artifacts",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.31494254",
-    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "settings.editor.selected.configurable": "preferences.sourceCode.Java",
     "sql.rename.search.for.storage.occurrences": "true"
   },
   "keyToStringList": {
@@ -200,6 +227,7 @@
       <workItem from="1674502655144" duration="656000" />
       <workItem from="1674503355724" duration="1098000" />
       <workItem from="1674512622473" duration="1467000" />
+      <workItem from="1674546819239" duration="599000" />
     </task>
     <servers />
   </component>

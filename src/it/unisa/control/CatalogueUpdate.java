@@ -1,18 +1,16 @@
 package it.unisa.control;
 
+import it.unisa.model.ProductBean;
+import it.unisa.model.ProductDAO;
 import java.io.IOException;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
-
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
-import it.unisa.model.ProductBean;
-import it.unisa.model.ProductDAO;
 
 /**
  * Servlet implementation class CatalogueUpdate
