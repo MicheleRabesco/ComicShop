@@ -47,7 +47,7 @@ public class CheckOutServlet extends HttpServlet {
     for (AddressBean address : addresses) {
       String indirizzo;
       indirizzo =
-          address.getVia() + " " + address.getNumero_civico() + " " + address.getCitta() + " " + address.getProvincia() + " " + address.getCap();
+          address.getVia() + " " + address.getNumeroCivico() + " " + address.getCitta() + " " + address.getProvincia() + " " + address.getCap();
 
       indirizzi.add(indirizzo);
     }
@@ -59,7 +59,7 @@ public class CheckOutServlet extends HttpServlet {
     for (PaymentMethodBean paymentMethod : paymentMethods) {
       String metodoPagamento;
       metodoPagamento =
-          paymentMethod.getTipo() + " " + paymentMethod.getTitolare() + " " + paymentMethod.getIndirizzo_fatturazione() + " " + paymentMethod.getNumero() + " " + paymentMethod.getScadenza();
+          paymentMethod.getTipo() + " " + paymentMethod.getTitolare() + " " + paymentMethod.getIndirizzoFatturazione() + " " + paymentMethod.getNumero() + " " + paymentMethod.getScadenza();
 
       metodiPagamento.add(metodoPagamento);
     }

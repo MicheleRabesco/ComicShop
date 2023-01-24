@@ -8,9 +8,9 @@ public class UserBean {
   private String cognome;
   private String email;
   private String password;
-  private String num_tel;
-  private String paese_residenza;
-  private LocalDate data_nascita;
+  private String numTel;
+  private String paeseResidenza;
+  private LocalDate dataNascita;
   private boolean valid;
   private boolean admin;
 
@@ -55,28 +55,28 @@ public class UserBean {
     this.password = password;
   }
 
-  public String getNum_tel() {
-    return num_tel;
+  public String getNumTel() {
+    return numTel;
   }
 
-  public void setNum_tel(String num_tel) {
-    this.num_tel = num_tel;
+  public void setNumTel(String numTel) {
+    this.numTel = numTel;
   }
 
-  public String getPaese_residenza() {
-    return paese_residenza;
+  public String getPaeseResidenza() {
+    return paeseResidenza;
   }
 
-  public void setPaese_residenza(String paese_residenza) {
-    this.paese_residenza = paese_residenza;
+  public void setPaeseResidenza(String paeseResidenza) {
+    this.paeseResidenza = paeseResidenza;
   }
 
-  public LocalDate getData_nascita() {
-    return data_nascita;
+  public LocalDate getDataNascita() {
+    return dataNascita;
   }
 
-  public void setData_nascita(LocalDate data_nascita) {
-    this.data_nascita = data_nascita;
+  public void setDataNascita(LocalDate dataNascita) {
+    this.dataNascita = dataNascita;
   }
 
   public boolean isValid() {

@@ -50,12 +50,12 @@ LinkedList<ContentBean> products = (LinkedList<ContentBean>) session.getAttribut
 
 			<tbody class=details>
 				<tr>
-					<td><%=order.getNum_ordine()%></td>
-					<td><%=String.format("%.2f", order.getCosto_totale())%>
+					<td><%=order.getNumOrdine()%></td>
+					<td><%=String.format("%.2f", order.getCostoTotale())%>
 						&euro;</td>
-					<td><%=order.getIndirizzo_spedizione()%></td>
-					<td><%=order.getData_ordine()%></td>
-					<td><%=order.getData_spedizione()%></td>
+					<td><%=order.getIndirizzoSpedizione()%></td>
+					<td><%=order.getDataOrdine()%></td>
+					<td><%=order.getDataSpedizione()%></td>
 				</tr>
 			</tbody>
 		</table>
@@ -79,10 +79,10 @@ LinkedList<ContentBean> products = (LinkedList<ContentBean>) session.getAttribut
 				for (ContentBean bean : products) {
 			%>
 			<tr>
-				<td><%=bean.getNome_art()%></td>
-				<td><%=String.format("%.2f", bean.getPrezzo_acquisto())%>
+				<td><%=bean.getNomeArt()%></td>
+				<td><%=String.format("%.2f", bean.getPrezzoAcquisto())%>
 					&euro;</td>
-				<td><%=bean.getNum_art_acq()%></td>
+				<td><%=bean.getNumArtAcq()%></td>
 				<td><%=bean.getIva()%>%</td>
 			</tr>
 

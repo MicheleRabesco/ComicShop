@@ -1017,11 +1017,11 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </table>
-    <table id="294" parent="274" name="indirizzo_spedizione">
+    <table id="294" parent="274" name="indirizzospedizione">
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </table>
-    <table id="295" parent="274" name="metodo_di_pagamento">
+    <table id="295" parent="274" name="metododipagamento">
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </table>
@@ -1057,7 +1057,7 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <NotNull>1</NotNull>
       <Position>4</Position>
     </column>
-    <column id="303" parent="286" name="data_di_uscita">
+    <column id="303" parent="286" name="dataDiUscita">
       <DataType>date|0s</DataType>
       <Position>5</Position>
     </column>
@@ -1108,15 +1108,15 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <DataType>int|0s</DataType>
       <Position>3</Position>
     </column>
-    <column id="314" parent="287" name="prezzo_acquisto">
+    <column id="314" parent="287" name="prezzoAcquisto">
       <DataType>float|0s</DataType>
       <Position>4</Position>
     </column>
-    <column id="315" parent="287" name="nome_art">
+    <column id="315" parent="287" name="nomeArt">
       <DataType>varchar(45)|0s</DataType>
       <Position>5</Position>
     </column>
-    <column id="316" parent="287" name="num_art_acq">
+    <column id="316" parent="287" name="numArtAcq">
       <DataType>int|0s</DataType>
       <Position>6</Position>
     </column>
@@ -1146,14 +1146,14 @@ articolo</ColNames>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="322" parent="288" name="metodo_di_pagamento">
+    <column id="322" parent="288" name="metododipagamento">
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
     <index id="323" parent="288" name="PRIMARY">
       <ColNames>utente
-metodo_di_pagamento</ColNames>
+metododipagamento</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
@@ -1204,7 +1204,7 @@ metodo_di_pagamento</ColNames>
       <DataType>varchar(45)|0s</DataType>
       <Position>2</Position>
     </column>
-    <column id="334" parent="290" name="num_pagine">
+    <column id="334" parent="290" name="numPagine">
       <DataType>int|0s</DataType>
       <Position>3</Position>
     </column>
@@ -1285,11 +1285,11 @@ metodo_di_pagamento</ColNames>
       <DataType>tinyint|0s</DataType>
       <Position>2</Position>
     </column>
-    <column id="351" parent="292" name="età_consigliata">
+    <column id="351" parent="292" name="etaConsigliata">
       <DataType>int|0s</DataType>
       <Position>3</Position>
     </column>
-    <column id="352" parent="292" name="casa_editrice">
+    <column id="352" parent="292" name="casaEditrice">
       <DataType>varchar(45)|0s</DataType>
       <Position>4</Position>
     </column>
@@ -1330,32 +1330,32 @@ metodo_di_pagamento</ColNames>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <column id="360" parent="293" name="numero_civico">
+    <column id="360" parent="293" name="numeroCivico">
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
       <Position>4</Position>
     </column>
     <foreign-key id="361" parent="293" name="via">
       <ColNames>via
-numero_civico
+numeroCivico
 cap</ColNames>
       <OnUpdate>cascade</OnUpdate>
       <RefColNames>via
-numero_civico
+numeroCivico
 cap</RefColNames>
-      <RefTableName>indirizzo_spedizione</RefTableName>
+      <RefTableName>indirizzospedizione</RefTableName>
     </foreign-key>
     <index id="362" parent="293" name="PRIMARY">
       <ColNames>via
 cap
 utente
-numero_civico</ColNames>
+numeroCivico</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
     <index id="363" parent="293" name="via_idx">
       <ColNames>via
-numero_civico
+numeroCivico
 cap</ColNames>
       <Type>btree</Type>
     </index>
@@ -1364,7 +1364,7 @@ cap</ColNames>
       <Type>btree</Type>
     </index>
     <index id="365" parent="293" name="numero_civico_idx">
-      <ColNames>numero_civico</ColNames>
+      <ColNames>numeroCivico</ColNames>
       <Type>btree</Type>
     </index>
     <key id="366" parent="293" name="PRIMARY">
@@ -1377,7 +1377,7 @@ cap</ColNames>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="368" parent="294" name="numero_civico">
+    <column id="368" parent="294" name="numeroCivico">
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
       <Position>2</Position>
@@ -1399,7 +1399,7 @@ cap</ColNames>
     </column>
     <index id="372" parent="294" name="PRIMARY">
       <ColNames>via
-numero_civico
+numeroCivico
 cap</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
@@ -1410,7 +1410,7 @@ cap</ColNames>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
     <column id="374" parent="295" name="id">
-      <AutoIncrement>9</AutoIncrement>
+      <AutoIncrement>10</AutoIncrement>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
@@ -1435,7 +1435,7 @@ cap</ColNames>
       <NotNull>1</NotNull>
       <Position>5</Position>
     </column>
-    <column id="379" parent="295" name="indirizzo_fatturazione">
+    <column id="379" parent="295" name="indirizzoFatturazione">
       <DataType>varchar(45)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>6</Position>
@@ -1463,26 +1463,26 @@ cap</ColNames>
     <key id="384" parent="295" name="id_UNIQUE">
       <UnderlyingIndexName>id_UNIQUE</UnderlyingIndexName>
     </key>
-    <column id="385" parent="296" name="numero_ordine">
-      <AutoIncrement>14</AutoIncrement>
+    <column id="385" parent="296" name="numeroOrdine">
+      <AutoIncrement>1</AutoIncrement>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="386" parent="296" name="costo_totale">
+    <column id="386" parent="296" name="costoTotale">
       <DataType>float|0s</DataType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="387" parent="296" name="indirizzo_spedizione">
+    <column id="387" parent="296" name="indirizzospedizione">
       <DataType>varchar(100)|0s</DataType>
       <Position>3</Position>
     </column>
-    <column id="388" parent="296" name="data_spedizione">
+    <column id="388" parent="296" name="dataSpedizione">
       <DataType>date|0s</DataType>
       <Position>4</Position>
     </column>
-    <column id="389" parent="296" name="metodo_di_pagamento">
+    <column id="389" parent="296" name="metododipagamento">
       <DataType>varchar(70)|0s</DataType>
       <Position>5</Position>
     </column>
@@ -1491,7 +1491,7 @@ cap</ColNames>
       <NotNull>1</NotNull>
       <Position>6</Position>
     </column>
-    <column id="391" parent="296" name="data_ordine">
+    <column id="391" parent="296" name="dataOrdine">
       <DataType>date|0s</DataType>
       <NotNull>1</NotNull>
       <Position>7</Position>
@@ -1503,7 +1503,7 @@ cap</ColNames>
       <RefTableName>utente</RefTableName>
     </foreign-key>
     <index id="393" parent="296" name="PRIMARY">
-      <ColNames>numero_ordine</ColNames>
+      <ColNames>numeroOrdine</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
@@ -1524,7 +1524,7 @@ cap</ColNames>
       <DataType>varchar(500)|0s</DataType>
       <Position>2</Position>
     </column>
-    <column id="398" parent="297" name="data_pubblicazione">
+    <column id="398" parent="297" name="dataPubblicazione">
       <DataType>date|0s</DataType>
       <Position>3</Position>
     </column>
@@ -1570,15 +1570,15 @@ articolo</ColNames>
       <DataType>varchar(45)|0s</DataType>
       <Position>5</Position>
     </column>
-    <column id="408" parent="298" name="num_telefono">
+    <column id="408" parent="298" name="numTelefono">
       <DataType>varchar(45)|0s</DataType>
       <Position>6</Position>
     </column>
-    <column id="409" parent="298" name="paese_residenza">
+    <column id="409" parent="298" name="paeseResidenza">
       <DataType>varchar(45)|0s</DataType>
       <Position>7</Position>
     </column>
-    <column id="410" parent="298" name="data_nascita">
+    <column id="410" parent="298" name="dataNascita">
       <DataType>date|0s</DataType>
       <Position>8</Position>
     </column>

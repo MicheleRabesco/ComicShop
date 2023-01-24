@@ -162,7 +162,7 @@ if (session == null || session.getAttribute("currentSessionUser") == null) {
 
 
 				<td>
-					<INPUT TYPE=date class="data" name="data" VALUE=<%=bean.getData_uscita()%>>
+					<INPUT TYPE=date class="data" name="data" VALUE=<%=bean.getDataDiUscita()%>>
 				</td>
 
 				<td>

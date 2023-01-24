@@ -55,7 +55,7 @@ public class CatalogueUpdate extends HttpServlet {
     newProduct.setNome((request.getParameter("nome")));
     newProduct.setPrezzo(Float.parseFloat(request.getParameter("prezzo").replace(',', '.')));
     newProduct.setSaldo(Integer.parseInt(request.getParameter("saldo")));
-    newProduct.setData_uscita(LocalDate.parse(request.getParameter("data")));
+    newProduct.setDataDiUscita(LocalDate.parse(request.getParameter("data")));
     newProduct.setVoto(Float.parseFloat(request.getParameter("voto")));
     newProduct.setDescrizione(request.getParameter("descrizione"));
     newProduct.setPeso(Float.parseFloat(request.getParameter("peso")));

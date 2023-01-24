@@ -6,7 +6,7 @@ function validateform() {
 	var cognome = $("input[name=cogn]").val();
 	var email = $("input[name=email]").val();
 	var password = $("input[name=pwd]").val();
-	var num_tel = $("input[name=num_tel]").val();
+	var numTel = $("input[name=numTel]").val();
 	var paese = $("input[name=paese]").val();
 	var data = $("input[name=data]").val();
 
@@ -15,7 +15,7 @@ function validateform() {
 	surname_validation(cognome);
 	ValidateEmail(email);
 	password_validation(password, 7, 12);
-	num_tel_validation(num_tel);
+	num_tel_validation(numTel);
 	country_validation(paese);
 	data_validation(data);
 
@@ -120,12 +120,12 @@ function num_tel_validation(num_tel) {
 		return true;
 	}
 	else {
-		$("#myform input[name=num_tel]").css({
+		$("#myform input[name=numTel]").css({
 			"border-color": "red",
 			"border-width": "thick"
 		});
-		$("#myform input[name=num_tel]").val("");
-		$("#myform input[name=num_tel]").attr("placeholder", "numero di telefono non valido");
+		$("#myform input[name=numTel]").val("");
+		$("#myform input[name=numTel]").attr("placeholder", "numero di telefono non valido");
 
 		valid = false;
 		return false;

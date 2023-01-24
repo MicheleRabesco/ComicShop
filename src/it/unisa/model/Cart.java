@@ -74,12 +74,12 @@ public class Cart {
   }
 
   public float getTotalCost() {
-    float costo_totale = 0;
+    float costoTotale = 0;
     for (int i = 0; i < products.size(); i++) {
-      costo_totale += products.get(i).getTotalCost();
+      costoTotale += products.get(i).getTotalCost();
 
     }
-    return costo_totale;
+    return costoTotale;
   }
 
   public boolean IsEmpty() {

@@ -16,7 +16,7 @@ public class PaymentMethodDAO {
 
   private static final String TABLE_NAME = "utente";
   private static final String TABLE_NAME2 = "fatturazione";
-  private static final String TABLE_NAME3 = "metodo_di_pagamento";
+  private static final String TABLE_NAME3 = "metododipagamento";
   static Connection currentCon = null;
   static ResultSet rs = null;
   private static DataSource ds;
@@ -37,7 +37,7 @@ public class PaymentMethodDAO {
     List<PaymentMethodBean> Methods = new LinkedList<PaymentMethodBean>();
     PreparedStatement preparedStatement = null;
     String SearchQuery =
-        "Select " + TABLE_NAME3 + ".*" + " FROM " + TABLE_NAME + " Join " + TABLE_NAME2 + " ON username=utente " + " Join " + TABLE_NAME3 + " ON " + TABLE_NAME2 + ".metodo_di_pagamento = " + TABLE_NAME3 + ".id" + " WHERE " + TABLE_NAME + ".username = ?";
+        "Select " + TABLE_NAME3 + ".*" + " FROM " + TABLE_NAME + " Join " + TABLE_NAME2 + " ON username=utente " + " Join " + TABLE_NAME3 + " ON " + TABLE_NAME2 + ".metododipagamento = " + TABLE_NAME3 + ".id" + " WHERE " + TABLE_NAME + ".username = ?";
     Connection connection = null;
     try {
       connection = ds.getConnection();
@@ -48,7 +48,7 @@ public class PaymentMethodDAO {
       while (rs.next()) {
         PaymentMethodBean bean = new PaymentMethodBean();
         bean.setId(rs.getInt("id"));
-        bean.setIndirizzo_fatturazione(rs.getString("indirizzo_fatturazione"));
+        bean.setIndirizzoFatturazione(rs.getString("indirizzo_fatturazione"));
         bean.setNumero(rs.getLong("numero"));
         bean.setScadenza(rs.getDate("scadenza").toLocalDate());
         bean.setPredefinito(rs.getBoolean("predefinito"));
@@ -71,7 +71,7 @@ public class PaymentMethodDAO {
     PreparedStatement preparedStatement = null;
 
     String insertSQL =
-        "INSERT INTO " + TABLE_NAME3 + " (tipo,titolare,scadenza,predefinito,indirizzo_fatturazione,numero ) VALUES (?, ?,?, ?,?,?)";
+        "INSERT INTO " + TABLE_NAME3 + " (tipo,titolare,scadenza,predefinito,indirizzofatturazione,numero ) VALUES (?, ?,?, ?,?,?)";
 
     try {
       connection = ds.getConnection();
@@ -80,7 +80,7 @@ public class PaymentMethodDAO {
       preparedStatement.setString(2, PaymentMethod.getTitolare());
       preparedStatement.setDate(3, Date.valueOf(PaymentMethod.getScadenza()));
       preparedStatement.setBoolean(4, PaymentMethod.isPredefinito());
-      preparedStatement.setString(5, PaymentMethod.getIndirizzo_fatturazione());
+      preparedStatement.setString(5, PaymentMethod.getIndirizzoFatturazione());
       preparedStatement.setLong(6, PaymentMethod.getNumero());
       preparedStatement.executeUpdate();
 
@@ -90,7 +90,7 @@ public class PaymentMethodDAO {
         try {
           preparedStatement.close();
 
-          insertSQL = "INSERT INTO " + TABLE_NAME2 + " (utente,metodo_di_pagamento) VALUES (?, ?)";
+          insertSQL = "INSERT INTO " + TABLE_NAME2 + " (utente,metododipagamento) VALUES (?, ?)";
           preparedStatement = connection.prepareStatement(insertSQL);
           preparedStatement.setString(1, user.getUsername());
           preparedStatement.setInt(2, PaymentMethod.getId());
@@ -128,7 +128,7 @@ public class PaymentMethodDAO {
 
     try {
       preparedStatement.close();
-      insertSQL = "INSERT INTO " + TABLE_NAME2 + " (utente,metodo_di_pagamento) VALUES (?, ?)";
+      insertSQL = "INSERT INTO " + TABLE_NAME2 + " (utente,metododipagamento) VALUES (?, ?)";
       connection = ds.getConnection();
       int autoIncKeyFromFunc = -1;
       preparedStatement = connection.prepareStatement("SELECT LAST_INSERT_ID()");

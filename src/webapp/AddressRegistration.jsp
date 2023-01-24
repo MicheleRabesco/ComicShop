@@ -28,7 +28,7 @@ if (session == null || session.getAttribute("currentSessionUser") == null) {
 	
 	<form action="AddressControl" id="addressform">
 		<label>Via<input class=address type=text name=via  placeholder="Via Armando Diaz" required></label> <br>
-		<label>Numero Civico<input class=address type=number name=numero_civico placeholder="15" required></label> <br>
+		<label>Numero Civico<input class=address type=number name=numeroCivico placeholder="15" required></label> <br>
 		<label>Cap<input class=address type=number name=cap placeholder="84018" required></label> <br>
 		<label>Città<input class=address type=text name=citta  placeholder="Salerno" required></label> <br>
 		<label>Provincia<input class=address type=text name=provincia placeholder="Salerno" required></label> <br>

@@ -54,7 +54,7 @@ if (session == null || session.getAttribute("currentSessionUser") == null) {
 			<td><%=product.getNome()%></td>
 			<td><%=String.format("%.2f", product.getPrezzo())   %> &euro;</td>
 			<td><%=product.getSaldo()%></td>
-			<td><%=product.getData_uscita()%></td>
+			<td><%=product.getDataDiUscita()%></td>
 			<td><%=product.getVoto()%></td>
 			<td><%=product.getDescrizione()%></td>
 			<td><%=product.getPeso()%></td>

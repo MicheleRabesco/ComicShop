@@ -42,7 +42,7 @@ public class UserUpdateServlet extends HttpServlet {
     user.setNome(nome);
     user.setCognome(cognome);
     user.setEmail(email);
-    user.setData_nascita(data);
+    user.setDataNascita(data);
     dao.Alter(user.getUsername(), user);
     response.sendRedirect("Homepage.jsp");
 

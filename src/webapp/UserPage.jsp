@@ -47,7 +47,7 @@
 		<li>
 		<div class="user">
 			<div class="user-label">Data di nascita:</div>
-				<input class="user" name=data type="date" value=<%=user.getData_nascita()%>>
+				<input class="user" name=data type="date" value=<%=user.getDataNascita()%>>
 			</div>
 		</li>
 		<li>

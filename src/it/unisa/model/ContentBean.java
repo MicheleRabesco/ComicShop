@@ -2,9 +2,9 @@ package it.unisa.model;
 
 public class ContentBean {
   private int iva;
-  private float prezzo_acquisto;
-  private String nome_art;
-  private int num_art_acq;
+  private float prezzoAcquisto;
+  private String nomeArt;
+  private int numArtAcq;
 
   public int getIva() {
     return iva;
@@ -14,28 +14,28 @@ public class ContentBean {
     this.iva = iva;
   }
 
-  public float getPrezzo_acquisto() {
-    return prezzo_acquisto;
+  public float getPrezzoAcquisto() {
+    return prezzoAcquisto;
   }
 
-  public void setPrezzo_acquisto(float prezzo_acquisto) {
-    this.prezzo_acquisto = prezzo_acquisto;
+  public void setPrezzoAcquisto(float prezzoAcquisto) {
+    this.prezzoAcquisto = prezzoAcquisto;
   }
 
-  public String getNome_art() {
-    return nome_art;
+  public String getNomeArt() {
+    return nomeArt;
   }
 
-  public void setNome_art(String nome_art) {
-    this.nome_art = nome_art;
+  public void setNomeArt(String nomeArt) {
+    this.nomeArt = nomeArt;
   }
 
-  public int getNum_art_acq() {
-    return num_art_acq;
+  public int getNumArtAcq() {
+    return numArtAcq;
   }
 
-  public void setNum_art_acq(int num_art_acq) {
-    this.num_art_acq = num_art_acq;
+  public void setNumArtAcq(int numArtAcq) {
+    this.numArtAcq = numArtAcq;
   }
 
 

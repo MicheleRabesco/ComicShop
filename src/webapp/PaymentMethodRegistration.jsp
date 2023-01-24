@@ -40,7 +40,7 @@ if (session == null || session.getAttribute("currentSessionUser") == null) {
 			</label> <br> <label>Titolare<input class=paymentMethod
 				type=text name="titolare" placeholder="mario rossi" required></label> <br> <label>Indirizzo
 				di fatturazione<input class=paymentMethod type=text
-				name=indirizzo_fatturazione placeholder="Via Franco Salerni 165" required>
+									  name="indirizzoFatturazione" placeholder="Via Franco Salerni 165" required>
 			</label> <br> <label>Numero<input class=paymentMethod
 				type=text name="numero" placeholder="IT60X0542811101000000123456" required></label> <br> <label>Scadenza<input
 				class=paymentMethod type=date name=scadenza required></label> <br>

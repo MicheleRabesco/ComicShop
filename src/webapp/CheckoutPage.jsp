@@ -159,7 +159,7 @@ if (session == null || session.getAttribute("currentSessionUser") == null) {
 
 				<%
 				List<ItemOrder> prodcart = cart.getProducts();
-				float prezzo_finale = 0;
+				float prezzoFinale = 0;
 				for (ItemOrder beancart : prodcart) {
 				%>
 
@@ -174,7 +174,7 @@ if (session == null || session.getAttribute("currentSessionUser") == null) {
 					</tr>
 				</tbody>
 				<%
-				prezzo_finale += beancart.getTotalCost();
+				prezzoFinale += beancart.getTotalCost();
 				%>
 
 				<%
@@ -185,7 +185,7 @@ if (session == null || session.getAttribute("currentSessionUser") == null) {
 
 					<tr>
 						<th colspan=3>Totale:</th>
-						<td><%=String.format("%.2f", prezzo_finale)%> &euro;</td>
+						<td><%=String.format("%.2f", prezzoFinale)%> &euro;</td>
 					</tr>
 				</tfoot>
 			</table>

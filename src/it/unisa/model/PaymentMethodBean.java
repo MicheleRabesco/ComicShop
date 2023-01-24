@@ -8,7 +8,7 @@ public class PaymentMethodBean {
   private String titolare;
   private LocalDate scadenza;
   private boolean predefinito;
-  private String indirizzo_fatturazione;
+  private String indirizzofatturazione;
   private Long numero;
 
 
@@ -49,12 +49,12 @@ public class PaymentMethodBean {
     this.predefinito = predefinito;
   }
 
-  public String getIndirizzo_fatturazione() {
-    return indirizzo_fatturazione;
+  public String getIndirizzoFatturazione() {
+    return indirizzofatturazione;
   }
 
-  public void setIndirizzo_fatturazione(String indirizzo_fatturazione) {
-    this.indirizzo_fatturazione = indirizzo_fatturazione;
+  public void setIndirizzoFatturazione(String indirizzofatturazione) {
+    this.indirizzofatturazione = indirizzofatturazione;
   }
 
   public Long getNumero() {

@@ -4,13 +4,13 @@ import java.time.LocalDate;
 
 public class OrderBean {
   private long id;
-  private long num_ordine;
-  private float costo_totale;
-  private String indirizzo_spedizione;
-  private LocalDate data_spedizione;
-  private String metodo_di_pagamento;
+  private long numOrdine;
+  private float costoTotale;
+  private String indirizzospedizione;
+  private LocalDate dataSpedizione;
+  private String metododipagamento;
   private String Username;
-  private LocalDate data_ordine;
+  private LocalDate dataOrdine;
 
   public long getId() {
     return id;
@@ -22,44 +22,44 @@ public class OrderBean {
   }
 
 
-  public long getNum_ordine() {
-    return num_ordine;
+  public long getNumOrdine() {
+    return numOrdine;
   }
 
-  public void setNum_ordine(long num_ordine) {
-    this.num_ordine = num_ordine;
+  public void setNumOrdine(long numOrdine) {
+    this.numOrdine = numOrdine;
   }
 
-  public float getCosto_totale() {
-    return costo_totale;
+  public float getCostoTotale() {
+    return costoTotale;
   }
 
-  public void setCosto_totale(float costo_totale) {
-    this.costo_totale = costo_totale;
+  public void setCostoTotale(float costoTotale) {
+    this.costoTotale = costoTotale;
   }
 
-  public String getIndirizzo_spedizione() {
-    return indirizzo_spedizione;
+  public String getIndirizzoSpedizione() {
+    return indirizzospedizione;
   }
 
-  public void setIndirizzo_spedizione(String indirizzo_spedizione) {
-    this.indirizzo_spedizione = indirizzo_spedizione;
+  public void setIndirizzoSpedizione(String indirizzospedizione) {
+    this.indirizzospedizione = indirizzospedizione;
   }
 
-  public LocalDate getData_spedizione() {
-    return data_spedizione;
+  public LocalDate getDataSpedizione() {
+    return dataSpedizione;
   }
 
-  public void setData_spedizione(LocalDate data_spedizione) {
-    this.data_spedizione = data_spedizione;
+  public void setDataSpedizione(LocalDate dataSpedizione) {
+    this.dataSpedizione = dataSpedizione;
   }
 
-  public String getMetodo_di_pagamento() {
-    return metodo_di_pagamento;
+  public String getMetodoDiPagamento() {
+    return metododipagamento;
   }
 
-  public void setMetodo_di_pagamento(String metodo_di_pagamento) {
-    this.metodo_di_pagamento = metodo_di_pagamento;
+  public void setMetodoDiPagamento(String metododipagamento) {
+    this.metododipagamento = metododipagamento;
   }
 
   public String getUsername() {
@@ -70,12 +70,12 @@ public class OrderBean {
     Username = username;
   }
 
-  public LocalDate getData_ordine() {
-    return data_ordine;
+  public LocalDate getDataOrdine() {
+    return dataOrdine;
   }
 
-  public void setData_ordine(LocalDate data_ordine) {
-    this.data_ordine = data_ordine;
+  public void setDataOrdine(LocalDate dataOrdine) {
+    this.dataOrdine = dataOrdine;
   }
 
 }

@@ -32,14 +32,14 @@ public class AddressControl extends HttpServlet {
   protected void doGet(HttpServletRequest request, HttpServletResponse response)
       throws ServletException, IOException {
     String via = request.getParameter("via");
-    int numero_civico = Integer.parseInt(request.getParameter("numero_civico"));
+    int numeroCivico = Integer.parseInt(request.getParameter("numeroCivico"));
     int cap = Integer.parseInt(request.getParameter("cap"));
     String citta = request.getParameter("citta");
     String provincia = request.getParameter("provincia");
     AddressBean address = new AddressBean();
     UserBean user = (UserBean) request.getSession().getAttribute("currentSessionUser");
     address.setVia(via);
-    address.setNumero_civico(numero_civico);
+    address.setNumeroCivico(numeroCivico);
     address.setCap(cap);
     address.setCitta(citta);
     address.setProvincia(provincia);

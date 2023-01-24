@@ -10,32 +10,40 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d841be6c-b30e-46e3-9553-5476539edc8b" name="Changes" comment="Update">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/06de1c04-bbc4-465b-b328-56b881ed60d7.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/06de1c04-bbc4-465b-b328-56b881ed60d7.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/it/unisa/control/AddressControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unisa/control/AddressControl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unisa/control/AdminFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unisa/control/AdminFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unisa/control/Catalogo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unisa/control/Catalogo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/it/unisa/control/CatalogueUpdate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unisa/control/CatalogueUpdate.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/it/unisa/control/CheckOutServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unisa/control/CheckOutServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unisa/control/LoginFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unisa/control/LoginFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unisa/control/LoginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unisa/control/LoginServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unisa/control/OrderArchiveServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unisa/control/OrderArchiveServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unisa/control/OrderHistoryServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unisa/control/OrderHistoryServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unisa/control/OrdineControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unisa/control/OrdineControl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/it/unisa/control/PaymentMethodControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unisa/control/PaymentMethodControl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/it/unisa/control/ProductControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unisa/control/ProductControl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/it/unisa/control/UserControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unisa/control/UserControl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/it/unisa/control/UserPageServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unisa/control/UserPageServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/it/unisa/control/UserUpdateServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unisa/control/UserUpdateServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unisa/control/Visibility.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unisa/control/Visibility.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unisa/control/validation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unisa/control/validation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unisa/model/AddressBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unisa/model/AddressBean.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/it/unisa/model/AddressDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unisa/model/AddressDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/it/unisa/model/Cart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unisa/model/Cart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unisa/model/ContentBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unisa/model/ContentBean.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unisa/model/OrderBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unisa/model/OrderBean.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/it/unisa/model/OrderDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unisa/model/OrderDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unisa/model/PaymentMethodBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unisa/model/PaymentMethodBean.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/it/unisa/model/PaymentMethodDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unisa/model/PaymentMethodDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unisa/model/PhotoDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unisa/model/PhotoDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unisa/model/ProductBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unisa/model/ProductBean.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/it/unisa/model/ProductDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unisa/model/ProductDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unisa/model/ProductModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unisa/model/ProductModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unisa/model/UserBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unisa/model/UserBean.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/it/unisa/model/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unisa/model/UserDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/webapp/AddressRegistration.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/webapp/AddressRegistration.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/webapp/Admin/Catalogo.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/webapp/Admin/Catalogo.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/webapp/Admin/Ordini.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/webapp/Admin/Ordini.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/webapp/CheckoutPage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/webapp/CheckoutPage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/webapp/OrderHistory.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/webapp/OrderHistory.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/webapp/PaymentMethodRegistration.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/webapp/PaymentMethodRegistration.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/webapp/RegistrationPage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/webapp/RegistrationPage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/webapp/UserPage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/webapp/UserPage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/webapp/cart.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/webapp/cart.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/webapp/js/registration.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/webapp/js/registration.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/webapp/orderDetails.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/webapp/orderDetails.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/webapp/productDetails.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/webapp/productDetails.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,25 +85,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/miche/OneDrive/Documenti/GitHub/ComicShop2023/src/webapp",
-    "project.structure.last.edited": "Artifacts",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.31494254",
-    "settings.editor.selected.configurable": "preferences.sourceCode.Java",
-    "sql.rename.search.for.storage.occurrences": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/miche/OneDrive/Documenti/GitHub/ComicShop2023/src/webapp&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.31494254&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode.Java&quot;,
+    &quot;sql.rename.search.for.storage.occurrences&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\miche\OneDrive\Documenti\GitHub\ComicShop2023\resources" />

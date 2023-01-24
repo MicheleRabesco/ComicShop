@@ -2,7 +2,7 @@ package it.unisa.model;
 
 public class AddressBean {
   private String via;
-  private int numero_civico;
+  private int numeroCivico;
   private int cap;
   private String citta;
   private String provincia;
@@ -16,12 +16,12 @@ public class AddressBean {
     this.via = via;
   }
 
-  public int getNumero_civico() {
-    return numero_civico;
+  public int getNumeroCivico() {
+    return numeroCivico;
   }
 
-  public void setNumero_civico(int numero_civico) {
-    this.numero_civico = numero_civico;
+  public void setNumeroCivico(int numeroCivico) {
+    this.numeroCivico = numeroCivico;
   }
 
   public int getCap() {

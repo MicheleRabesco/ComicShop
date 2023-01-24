@@ -35,7 +35,7 @@ public class PaymentMethodControl extends HttpServlet {
     int tipo = (request.getParameter("tipo") == "carta di credito") ? 0 : 1;
     String titolare = request.getParameter("titolare");
     boolean predefinito = false;
-    String indirizzo_fatturazione = request.getParameter("indirizzo_fatturazione");
+    String indirizzofatturazione = request.getParameter("indirizzofatturazione");
     long numero = Long.parseLong(request.getParameter("numero"));
     LocalDate scadenza = LocalDate.parse(request.getParameter("scadenza"));
     PaymentMethodBean paymentMethod = new PaymentMethodBean();
@@ -43,7 +43,7 @@ public class PaymentMethodControl extends HttpServlet {
     paymentMethod.setTipo(tipo);
     paymentMethod.setTitolare(titolare);
     paymentMethod.setPredefinito(predefinito);
-    paymentMethod.setIndirizzo_fatturazione(indirizzo_fatturazione);
+    paymentMethod.setIndirizzoFatturazione(indirizzofatturazione);
     paymentMethod.setNumero(numero);
     paymentMethod.setScadenza(scadenza);
     PaymentMethodDAO.doSave(user, paymentMethod);

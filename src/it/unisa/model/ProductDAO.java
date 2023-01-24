@@ -36,7 +36,7 @@ public class ProductDAO implements ProductModel {
     PreparedStatement preparedStatement = null;
 
     String insertSQL =
-        "INSERT INTO " + ProductDAO.TABLE_NAME + " (id,nome,prezzo, saldo, data_di_uscita,voto,descrizione,peso,quantita,mostra ) VALUES (?, ?, ?, ?,?,?,?,?,?,?)";
+        "INSERT INTO " + ProductDAO.TABLE_NAME + " (id,nome,prezzo, saldo, dataDiUscita,voto,descrizione,peso,quantita,mostra ) VALUES (?, ?, ?, ?,?,?,?,?,?,?)";
 
     try {
       connection = ds.getConnection();
@@ -45,7 +45,7 @@ public class ProductDAO implements ProductModel {
       preparedStatement.setString(2, product.getNome());
       preparedStatement.setFloat(3, product.getPrezzo());
       preparedStatement.setInt(4, product.getSaldo());
-      preparedStatement.setDate(5, Date.valueOf(product.getData_uscita()));
+      preparedStatement.setDate(5, Date.valueOf(product.getDataDiUscita()));
       preparedStatement.setFloat(6, product.getVoto());
       preparedStatement.setString(7, product.getDescrizione());
       preparedStatement.setFloat(8, product.getPeso());
@@ -86,7 +86,7 @@ public class ProductDAO implements ProductModel {
         bean.setNome(rs.getString("nome"));
         bean.setPrezzo(rs.getFloat("prezzo"));
         bean.setSaldo(rs.getInt("saldo"));
-        bean.setData_uscita(rs.getDate("data_di_uscita").toLocalDate());
+        bean.setDataDiUscita(rs.getDate("dataDiUscita").toLocalDate());
         bean.setVoto(rs.getFloat("voto"));
         bean.setDescrizione(rs.getString("descrizione"));
         bean.setPeso(rs.getFloat("peso"));
@@ -161,7 +161,7 @@ public class ProductDAO implements ProductModel {
         bean.setNome(rs.getString("nome"));
         bean.setPrezzo(rs.getFloat("prezzo"));
         bean.setSaldo(rs.getInt("saldo"));
-        bean.setData_uscita(rs.getDate("data_di_uscita").toLocalDate());
+        bean.setDataDiUscita(rs.getDate("dataDiUscita").toLocalDate());
         bean.setVoto(rs.getFloat("voto"));
         bean.setDescrizione(rs.getString("descrizione"));
         bean.setPeso(rs.getFloat("peso"));
@@ -186,7 +186,7 @@ public class ProductDAO implements ProductModel {
     Connection connection = null;
     PreparedStatement preparedStatement = null;
     String alterStatement =
-        "UPDATE `comicshop`.`articolo` SET `id` = ?, `nome` = ?, " + "`prezzo` = ?, `saldo` = ?, `data_di_uscita` = ?, " + "`voto` = ?, `descrizione` = ?, `peso` = ?, `quantita` = ?  " + " WHERE (`id` = ?);";
+        "UPDATE `comicshop`.`articolo` SET `id` = ?, `nome` = ?, " + "`prezzo` = ?, `saldo` = ?, `dataDiUscita` = ?, " + "`voto` = ?, `descrizione` = ?, `peso` = ?, `quantita` = ?  " + " WHERE (`id` = ?);";
 
     try {
       connection = ds.getConnection();
@@ -195,7 +195,7 @@ public class ProductDAO implements ProductModel {
       preparedStatement.setString(2, product.getNome());
       preparedStatement.setFloat(3, product.getPrezzo());
       preparedStatement.setInt(4, product.getSaldo());
-      preparedStatement.setDate(5, Date.valueOf(product.getData_uscita()));
+      preparedStatement.setDate(5, Date.valueOf(product.getDataDiUscita()));
       preparedStatement.setFloat(6, product.getVoto());
       preparedStatement.setString(7, product.getDescrizione());
       preparedStatement.setFloat(8, product.getPeso());

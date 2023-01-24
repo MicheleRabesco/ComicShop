@@ -40,7 +40,7 @@ if (session == null || session.getAttribute("currentSessionUser") == null) {
 				placeholder="someone@something.com"></label> <br> <label>Password<input
 				class=register type=password name=pwd placeholder="supersecret"
 				required></label> <br> <label>Num_tel<input
-				class=register type=number name=num_tel placeholder="3331725467"
+				class=register type=number name="numTel" placeholder="3331725467"
 				required></label> <br> <label>Paese di residenza<input
 				class=register type=text name=paese placeholder="Italia" required></label>
 			<br> <label>Data di nascita<input class=register

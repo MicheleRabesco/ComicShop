@@ -42,10 +42,10 @@ public class OrderDAO {
 
     PreparedStatement preparedStatement = null;
 
-    String indirizzo_spedizione = String.valueOf(indirizzo);
-    String metodo_di_pagamento = String.valueOf(pagamento);
+    String indirizzospedizione = String.valueOf(indirizzo);
+    String metododipagamento = String.valueOf(pagamento);
     String insertQuery =
-        "INSERT INTO " + TABLE_NAME + " ( costo_totale, indirizzo_spedizione, data_spedizione, " + "metodo_di_pagamento, username, data_ordine )" + " VALUES(?,?,?,?,?,?)";
+        "INSERT INTO " + TABLE_NAME + " ( costoTotale, indirizzospedizione, dataSpedizione, " + "metododipagamento, username, dataOrdine )" + " VALUES(?,?,?,?,?,?)";
 
     // connect to DB
     Connection connection = null;
@@ -53,9 +53,9 @@ public class OrderDAO {
       connection = ds.getConnection();
       preparedStatement = connection.prepareStatement(insertQuery);
       preparedStatement.setFloat(1, cart.getTotalCost());
-      preparedStatement.setString(2, indirizzo_spedizione);
+      preparedStatement.setString(2, indirizzospedizione);
       preparedStatement.setDate(3, Date.valueOf(LocalDate.now()));
-      preparedStatement.setString(4, metodo_di_pagamento);
+      preparedStatement.setString(4, metododipagamento);
       preparedStatement.setString(5, bean.getUsername());
       preparedStatement.setDate(6, Date.valueOf(LocalDate.now()));
       preparedStatement.executeUpdate();
@@ -116,7 +116,7 @@ public class OrderDAO {
 
     OrderBean bean = new OrderBean();
 
-    String selectSQL = "SELECT * FROM " + TABLE_NAME + " WHERE numero_ordine = ?";
+    String selectSQL = "SELECT * FROM " + TABLE_NAME + " WHERE numeroOrdine = ?";
 
     try {
       connection = ds.getConnection();
@@ -126,14 +126,14 @@ public class OrderDAO {
       ResultSet rs = preparedStatement.executeQuery();
 
       while (rs.next()) {
-        bean.setId(rs.getLong("numero_ordine"));
-        bean.setCosto_totale(rs.getFloat("costo_totale"));
-        bean.setNum_ordine(rs.getLong("numero_ordine"));
-        bean.setData_spedizione(rs.getDate("data_spedizione").toLocalDate());
-        bean.setMetodo_di_pagamento(rs.getString("metodo_di_pagamento"));
-        bean.setIndirizzo_spedizione(rs.getString("indirizzo_spedizione"));
+        bean.setId(rs.getLong("numeroOrdine"));
+        bean.setCostoTotale(rs.getFloat("costoTotale"));
+        bean.setNumOrdine(rs.getLong("numeroOrdine"));
+        bean.setDataSpedizione(rs.getDate("dataSpedizione").toLocalDate());
+        bean.setMetodoDiPagamento(rs.getString("metododipagamento"));
+        bean.setIndirizzoSpedizione(rs.getString("indirizzospedizione"));
         bean.setUsername(rs.getString("username"));
-        bean.setData_ordine(rs.getDate("data_ordine").toLocalDate());
+        bean.setDataOrdine(rs.getDate("dataOrdine").toLocalDate());
       }
     } catch (Exception e) {
       System.out.println("Error:" + e.getMessage());
@@ -171,14 +171,14 @@ public class OrderDAO {
 
       while (rs.next()) {
         OrderBean bean = new OrderBean();
-        bean.setId(rs.getLong("numero_ordine"));
-        bean.setCosto_totale(rs.getFloat("costo_totale"));
-        bean.setNum_ordine(rs.getLong("numero_ordine"));
-        bean.setData_spedizione(rs.getDate("data_spedizione").toLocalDate());
-        bean.setMetodo_di_pagamento(rs.getString("metodo_di_pagamento"));
-        bean.setIndirizzo_spedizione(rs.getString("indirizzo_spedizione"));
+        bean.setId(rs.getLong("numeroOrdine"));
+        bean.setCostoTotale(rs.getFloat("costoTotale"));
+        bean.setNumOrdine(rs.getLong("numeroOrdine"));
+        bean.setDataSpedizione(rs.getDate("dataSpedizione").toLocalDate());
+        bean.setMetodoDiPagamento(rs.getString("metododipagamento"));
+        bean.setIndirizzoSpedizione(rs.getString("indirizzospedizione"));
         bean.setUsername(rs.getString("username"));
-        bean.setData_ordine(rs.getDate("data_ordine").toLocalDate());
+        bean.setDataOrdine(rs.getDate("dataOrdine").toLocalDate());
         orders.add(bean);
       }
     } catch (Exception ex) {
@@ -216,14 +216,14 @@ public class OrderDAO {
 
       while (rs.next()) {
         OrderBean bean = new OrderBean();
-        bean.setId(rs.getLong("numero_ordine"));
-        bean.setCosto_totale(rs.getFloat("costo_totale"));
-        bean.setNum_ordine(rs.getLong("numero_ordine"));
-        bean.setData_spedizione(rs.getDate("data_spedizione").toLocalDate());
-        bean.setMetodo_di_pagamento(rs.getString("metodo_di_pagamento"));
-        bean.setIndirizzo_spedizione(rs.getString("indirizzo_spedizione"));
+        bean.setId(rs.getLong("numeroOrdine"));
+        bean.setCostoTotale(rs.getFloat("costoTotale"));
+        bean.setNumOrdine(rs.getLong("numeroOrdine"));
+        bean.setDataSpedizione(rs.getDate("dataSpedizione").toLocalDate());
+        bean.setMetodoDiPagamento(rs.getString("metododipagamento"));
+        bean.setIndirizzoSpedizione(rs.getString("indirizzospedizione"));
         bean.setUsername(rs.getString("username"));
-        bean.setData_ordine(rs.getDate("data_ordine").toLocalDate());
+        bean.setDataOrdine(rs.getDate("dataOrdine").toLocalDate());
         orders.add(bean);
       }
     } catch (Exception ex) {
@@ -254,7 +254,7 @@ public class OrderDAO {
     List<OrderBean> orders = new LinkedList<OrderBean>();
 
     String selectSQL =
-        "SELECT * FROM " + TABLE_NAME + " WHERE data_ordine BETWEEN  CAST(? AS DATE) AND CAST(? AS DATE)";
+        "SELECT * FROM " + TABLE_NAME + " WHERE dataOrdine BETWEEN  CAST(? AS DATE) AND CAST(? AS DATE)";
 
     try {
       connection = ds.getConnection();
@@ -265,14 +265,14 @@ public class OrderDAO {
 
       while (rs.next()) {
         OrderBean bean = new OrderBean();
-        bean.setId(rs.getLong("numero_ordine"));
-        bean.setCosto_totale(rs.getFloat("costo_totale"));
-        bean.setNum_ordine(rs.getLong("numero_ordine"));
-        bean.setData_spedizione(rs.getDate("data_spedizione").toLocalDate());
-        bean.setMetodo_di_pagamento(rs.getString("metodo_di_pagamento"));
-        bean.setIndirizzo_spedizione(rs.getString("indirizzo_spedizione"));
+        bean.setId(rs.getLong("numeroOrdine"));
+        bean.setCostoTotale(rs.getFloat("costoTotale"));
+        bean.setNumOrdine(rs.getLong("numeroOrdine"));
+        bean.setDataSpedizione(rs.getDate("dataSpedizione").toLocalDate());
+        bean.setMetodoDiPagamento(rs.getString("metododipagamento"));
+        bean.setIndirizzoSpedizione(rs.getString("indirizzospedizione"));
         bean.setUsername(rs.getString("username"));
-        bean.setData_ordine(rs.getDate("data_ordine").toLocalDate());
+        bean.setDataOrdine(rs.getDate("dataOrdine").toLocalDate());
         orders.add(bean);
       }
     } catch (Exception ex) {
@@ -302,7 +302,7 @@ public class OrderDAO {
     LinkedList<ContentBean> products = new LinkedList<ContentBean>();
 
     String selectSQL =
-        "SELECT contenuto.iva, contenuto.prezzo_acquisto, contenuto.nome_art,contenuto.num_art_acq                                          from contenuto  where contenuto.ordine = ?";
+        "SELECT contenuto.iva, contenuto.prezzoAcquisto, contenuto.nomeArt,contenuto.numArtAcq                                          from contenuto  where contenuto.ordine = ?";
 
     try {
       connection = ds.getConnection();
@@ -314,9 +314,9 @@ public class OrderDAO {
       while (rs.next()) {
         ContentBean bean = new ContentBean();
         bean.setIva(rs.getInt("iva"));
-        bean.setNome_art(rs.getString("Nome_art"));
-        bean.setNum_art_acq(rs.getInt("Num_art_acq"));
-        bean.setPrezzo_acquisto(rs.getFloat("Prezzo_acquisto"));
+        bean.setNomeArt(rs.getString("nomeArt"));
+        bean.setNumArtAcq(rs.getInt("numArtAcq"));
+        bean.setPrezzoAcquisto(rs.getFloat("prezzoAcquisto"));
         products.add(bean);
 
       }
@@ -355,14 +355,14 @@ public class OrderDAO {
 
       while (rs.next()) {
         OrderBean bean = new OrderBean();
-        bean.setId(rs.getLong("numero_ordine"));
-        bean.setCosto_totale(rs.getFloat("costo_totale"));
-        bean.setNum_ordine(rs.getLong("numero_ordine"));
-        bean.setData_spedizione(rs.getDate("data_spedizione").toLocalDate());
-        bean.setMetodo_di_pagamento(rs.getString("metodo_di_pagamento"));
-        bean.setIndirizzo_spedizione(rs.getString("indirizzo_spedizione"));
+        bean.setId(rs.getLong("numeroOrdine"));
+        bean.setCostoTotale(rs.getFloat("costoTotale"));
+        bean.setNumOrdine(rs.getLong("numeroOrdine"));
+        bean.setDataSpedizione(rs.getDate("dataSpedizione").toLocalDate());
+        bean.setMetodoDiPagamento(rs.getString("metododipagamento"));
+        bean.setIndirizzoSpedizione(rs.getString("indirizzospedizione"));
         bean.setUsername(rs.getString("username"));
-        bean.setData_ordine(rs.getDate("data_ordine").toLocalDate());
+        bean.setDataOrdine(rs.getDate("dataOrdine").toLocalDate());
         orders.add(bean);
       }
     } catch (Exception ex) {

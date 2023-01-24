@@ -60,17 +60,17 @@ public class UserDAO {
         String firstName = rs.getString("nome");
         String lastName = rs.getString("cognome");
         String email = rs.getString("email");
-        String num_tel = rs.getString("num_telefono");
-        String paese_residenza = rs.getString("paese_residenza");
-        LocalDate data_nascita = rs.getDate("data_nascita").toLocalDate();
+        String numTelefono = rs.getString("numTelefono");
+        String paeseResidenza = rs.getString("paeseResidenza");
+        LocalDate dataNascita = rs.getDate("dataNascita").toLocalDate();
         Boolean admin = rs.getBoolean("admin");
         System.out.println("Welcome " + firstName);
         bean.setNome(firstName);
         bean.setCognome(lastName);
         bean.setEmail(email);
-        bean.setNum_tel(num_tel);
-        bean.setPaese_residenza(paese_residenza);
-        bean.setData_nascita(data_nascita);
+        bean.setNumTel(numTelefono);
+        bean.setPaeseResidenza(paeseResidenza);
+        bean.setDataNascita(dataNascita);
         bean.setValid(true);
         bean.setAdmin(admin);
       }
@@ -116,7 +116,7 @@ public class UserDAO {
     PreparedStatement preparedStatement = null;
 
     String insertSQL =
-        "INSERT INTO " + TABLE_NAME + " (username,nome,cognome, email, password,num_telefono,paese_residenza,data_nascita) VALUES (?,?,?,?,?,?,?,?)";
+        "INSERT INTO " + TABLE_NAME + " (username,nome,cognome, email, password,numTelefono,paeseResidenza,dataNascita) VALUES (?,?,?,?,?,?,?,?)";
 
     System.out.println("Query: " + insertSQL);
     try {
@@ -127,9 +127,9 @@ public class UserDAO {
       preparedStatement.setString(3, bean.getCognome());
       preparedStatement.setString(4, bean.getEmail());
       preparedStatement.setString(5, bean.getPassword());
-      preparedStatement.setString(6, bean.getNum_tel());
-      preparedStatement.setString(7, bean.getPaese_residenza());
-      preparedStatement.setDate(8, Date.valueOf(bean.getData_nascita()));
+      preparedStatement.setString(6, bean.getNumTel());
+      preparedStatement.setString(7, bean.getPaeseResidenza());
+      preparedStatement.setDate(8, Date.valueOf(bean.getDataNascita()));
 
 
       preparedStatement.executeUpdate();
@@ -156,7 +156,7 @@ public class UserDAO {
     Connection connection = null;
     PreparedStatement preparedStatement = null;
     String alterStatement =
-        "UPDATE `comicshop`.`utente` SET `nome` = ?, `cognome` = ?, " + "`email` = ?,  `data_nascita` = ? " + " WHERE (`username` = ? ) ";
+        "UPDATE `comicshop`.`utente` SET `nome` = ?, `cognome` = ?, " + "`email` = ?,  `dataNascita` = ? " + " WHERE (`username` = ? ) ";
 
     try {
       connection = ds.getConnection();
@@ -164,7 +164,7 @@ public class UserDAO {
       preparedStatement.setString(1, user.getNome());
       preparedStatement.setString(2, user.getCognome());
       preparedStatement.setString(3, user.getEmail());
-      preparedStatement.setDate(4, Date.valueOf(user.getData_nascita()));
+      preparedStatement.setDate(4, Date.valueOf(user.getDataNascita()));
       preparedStatement.setString(5, username);
       System.out.print(preparedStatement);
 

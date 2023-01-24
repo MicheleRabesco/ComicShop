@@ -54,8 +54,8 @@ if (session == null || session.getAttribute("currentSessionUser") == null) {
 				<td><a
 					href="Ordine?action=mostradettagli&codice=<%=ordine.getId()%>"><%=ordine.getId()%></a>
 				</td>
-				<td><%=ordine.getData_ordine()%></td>
-				<td><%=ordine.getCosto_totale()%> &euro;</td>
+				<td><%=ordine.getDataOrdine()%></td>
+				<td><%=ordine.getCostoTotale()%> &euro;</td>
 				<td><%=ordine.getUsername()%> </td>
 			</tr>
 			<%

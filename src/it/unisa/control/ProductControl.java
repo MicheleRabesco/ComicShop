@@ -58,7 +58,7 @@ public class ProductControl extends HttpServlet {
           String nome = request.getParameter("nome");
           Float prezzo = Float.parseFloat(request.getParameter("prezzo"));
           Integer saldo = Integer.parseInt(request.getParameter("saldo"));
-          LocalDate data_uscita = LocalDate.parse(request.getParameter("data"));
+          LocalDate dataDiUscita = LocalDate.parse(request.getParameter("data"));
           Float voto = Float.parseFloat(request.getParameter("voto"));
           String descrizione = request.getParameter("descrizione");
           Float peso = Float.parseFloat(request.getParameter("peso"));
@@ -79,8 +79,8 @@ public class ProductControl extends HttpServlet {
           if (saldo != null) {
             product.setSaldo(saldo);
           }
-          if (data_uscita != null) {
-            product.setData_uscita(data_uscita);
+          if (dataDiUscita != null) {
+            product.setDataDiUscita(dataDiUscita);
           }
           if (voto != null) {
             product.setVoto(voto);
@@ -106,7 +106,7 @@ public class ProductControl extends HttpServlet {
           String nome = request.getParameter("nome");
           float prezzo = Float.parseFloat(request.getParameter("prezzo"));
           int saldo = Integer.parseInt(request.getParameter("saldo"));
-          LocalDate data_uscita = LocalDate.parse(request.getParameter("data"));
+          LocalDate dataDiUscita = LocalDate.parse(request.getParameter("dataDiUscita"));
           float voto = Float.parseFloat(request.getParameter("voto"));
           String descrizione = request.getParameter("descrizione");
           float peso = Float.parseFloat(request.getParameter("peso"));
@@ -116,7 +116,7 @@ public class ProductControl extends HttpServlet {
           bean.setNome(nome);
           bean.setPrezzo(prezzo);
           bean.setSaldo(saldo);
-          bean.setData_uscita(data_uscita);
+          bean.setDataDiUscita(dataDiUscita);
           bean.setVoto(voto);
           bean.setDescrizione(descrizione);
           bean.setPeso(peso);

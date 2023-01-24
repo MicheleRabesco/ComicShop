@@ -14,7 +14,7 @@ import javax.sql.DataSource;
 public class AddressDAO {
   private static final String TABLE_NAME = "utente";
   private static final String TABLE_NAME2 = "indirizzo";
-  private static final String TABLE_NAME3 = "indirizzo_spedizione";
+  private static final String TABLE_NAME3 = "indirizzospedizione";
   static Connection currentCon = null;
   static ResultSet rs = null;
   private static DataSource ds;
@@ -35,7 +35,7 @@ public class AddressDAO {
     List<AddressBean> addresses = new LinkedList<AddressBean>();
     PreparedStatement preparedStatement = null;
     String SearchQuery =
-        "Select " + TABLE_NAME3 + ".*" + " FROM " + TABLE_NAME + " Join " + TABLE_NAME2 + " ON username=utente " + " Join " + TABLE_NAME3 + " ON " + TABLE_NAME2 + ".via = " + TABLE_NAME3 + ".via" + " AND " + TABLE_NAME2 + ".cap= " + TABLE_NAME3 + ".cap" + " AND " + TABLE_NAME2 + ".numero_civico = " + TABLE_NAME3 + ".numero_civico " + " WHERE utente.username = ? ";
+        "Select " + TABLE_NAME3 + ".*" + " FROM " + TABLE_NAME + " Join " + TABLE_NAME2 + " ON username=utente " + " Join " + TABLE_NAME3 + " ON " + TABLE_NAME2 + ".via = " + TABLE_NAME3 + ".via" + " AND " + TABLE_NAME2 + ".cap= " + TABLE_NAME3 + ".cap" + " AND " + TABLE_NAME2 + ".numeroCivico = " + TABLE_NAME3 + ".numeroCivico " + " WHERE utente.username = ? ";
 
     Connection connection = null;
     try {
@@ -49,7 +49,7 @@ public class AddressDAO {
       while (rs.next()) {
         AddressBean bean = new AddressBean();
         bean.setVia(rs.getString("via"));
-        bean.setNumero_civico(rs.getInt("numero_civico"));
+        bean.setNumeroCivico(rs.getInt("numeroCivico"));
         bean.setCap(rs.getInt("cap"));
         bean.setCitta(rs.getString("citta"));
         bean.setProvincia(rs.getString("provincia"));
@@ -70,13 +70,13 @@ public class AddressDAO {
     PreparedStatement preparedStatement = null;
 
     String insertSQL =
-        "INSERT INTO " + TABLE_NAME3 + " (via,numero_civico,cap,citta,provincia ) VALUES (?, ?, ?,?,?)";
+        "INSERT INTO " + TABLE_NAME3 + " (via,numeroCivico,cap,citta,provincia ) VALUES (?, ?, ?,?,?)";
 
     try {
       connection = ds.getConnection();
       preparedStatement = connection.prepareStatement(insertSQL);
       preparedStatement.setString(1, address.getVia());
-      preparedStatement.setInt(2, address.getNumero_civico());
+      preparedStatement.setInt(2, address.getNumeroCivico());
       preparedStatement.setInt(3, address.getCap());
       preparedStatement.setString(4, address.getCitta());
       preparedStatement.setString(5, address.getProvincia());
@@ -89,12 +89,12 @@ public class AddressDAO {
           preparedStatement.close();
 
           insertSQL =
-              "INSERT INTO " + TABLE_NAME2 + " (via,utente,cap,numero_civico) VALUES (?, ?, ?,?)";
+              "INSERT INTO " + TABLE_NAME2 + " (via,utente,cap,numeroCivico) VALUES (?, ?, ?,?)";
           preparedStatement = connection.prepareStatement(insertSQL);
           preparedStatement.setString(1, address.getVia());
           preparedStatement.setString(2, user.getUsername());
           preparedStatement.setInt(3, address.getCap());
-          preparedStatement.setInt(4, address.getNumero_civico());
+          preparedStatement.setInt(4, address.getNumeroCivico());
           preparedStatement.executeUpdate();
 
         } catch (Exception e) {
@@ -131,12 +131,12 @@ public class AddressDAO {
       preparedStatement.close();
       connection = ds.getConnection();
       insertSQL =
-          "INSERT INTO " + TABLE_NAME2 + " (via,utente,cap,numero_civico) VALUES (?, ?, ?,?)";
+          "INSERT INTO " + TABLE_NAME2 + " (via,utente,cap,numeroCivico) VALUES (?, ?, ?,?)";
       preparedStatement = connection.prepareStatement(insertSQL);
       preparedStatement.setString(1, address.getVia());
       preparedStatement.setString(2, user.getUsername());
       preparedStatement.setInt(3, address.getCap());
-      preparedStatement.setInt(4, address.getNumero_civico());
+      preparedStatement.setInt(4, address.getNumeroCivico());
       preparedStatement.executeUpdate();
 
     } catch (Exception e) {

@@ -11,7 +11,7 @@ public class ProductBean implements Serializable {
   String nome;
   float prezzo;
   int saldo;
-  LocalDate data_uscita;
+  LocalDate dataDiUscita;
   float voto;
   String descrizione;
   float peso;
@@ -23,7 +23,7 @@ public class ProductBean implements Serializable {
     nome = "";
     prezzo = -1;
     saldo = -1;
-    data_uscita = LocalDate.MIN;
+    dataDiUscita = LocalDate.MIN;
     voto = -1;
     descrizione = "";
     peso = -1;
@@ -84,13 +84,13 @@ public class ProductBean implements Serializable {
   }
 
 
-  public LocalDate getData_uscita() {
-    return data_uscita;
+  public LocalDate getDataDiUscita() {
+    return dataDiUscita;
   }
 
 
-  public void setData_uscita(LocalDate data_uscita) {
-    this.data_uscita = data_uscita;
+  public void setDataDiUscita(LocalDate dataDiUscita) {
+    this.dataDiUscita = dataDiUscita;
   }
 
 
@@ -136,7 +136,7 @@ public class ProductBean implements Serializable {
 
   @Override
   public String toString() {
-    return nome + " (" + id + "), " + prezzo + " " + quantita + ". " + descrizione + " " + voto + " " + peso + " " + saldo + " " + data_uscita;
+    return nome + " (" + id + "), " + prezzo + " " + quantita + ". " + descrizione + " " + voto + " " + peso + " " + saldo + " " + dataDiUscita;
   }
 
 }
