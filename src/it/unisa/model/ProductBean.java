@@ -5,141 +5,140 @@ import java.time.LocalDate;
 
 public class ProductBean implements Serializable {
 
-		private static final long serialVersionUID = 1L;
-		
-		int id;
-		String nome;
-		float prezzo;
-		int saldo;
-		LocalDate data_uscita;
-		float voto;
-		String descrizione;
-		float peso;
-		int quantita;
-		boolean visible;
+  private static final long serialVersionUID = 1L;
 
-		public ProductBean() {
-			id = -1;
-			nome = "";
-			prezzo=-1;
-			saldo=-1;
-			data_uscita=LocalDate.MIN;
-			voto=-1;
-			descrizione = "";
-			peso=-1;
-			quantita = -1;
-			visible=false;
+  int id;
+  String nome;
+  float prezzo;
+  int saldo;
+  LocalDate data_uscita;
+  float voto;
+  String descrizione;
+  float peso;
+  int quantita;
+  boolean visible;
 
-		}
+  public ProductBean() {
+    id = -1;
+    nome = "";
+    prezzo = -1;
+    saldo = -1;
+    data_uscita = LocalDate.MIN;
+    voto = -1;
+    descrizione = "";
+    peso = -1;
+    quantita = -1;
+    visible = false;
 
-		
-		public boolean isVisible() {
-			return visible;
-		}
+  }
 
 
-		public void setVisible(boolean visible) {
-			this.visible = visible;
-		}
+  public boolean isVisible() {
+    return visible;
+  }
 
 
-		public int getId() {
-			return id;
-		}
+  public void setVisible(boolean visible) {
+    this.visible = visible;
+  }
 
 
-		public void setId(int id) {
-			this.id = id;
-		}
+  public int getId() {
+    return id;
+  }
 
 
-		public String getNome() {
-			return nome;
-		}
+  public void setId(int id) {
+    this.id = id;
+  }
 
 
-		public void setNome(String nome) {
-			this.nome = nome;
-		}
+  public String getNome() {
+    return nome;
+  }
 
 
-		public float getPrezzo() {
-			
-			return (float) (Math.round((prezzo )* 100.0) / 100.0);
-		}
+  public void setNome(String nome) {
+    this.nome = nome;
+  }
 
 
-		public void setPrezzo(float f) {
-			this.prezzo = f;
-		}
+  public float getPrezzo() {
+
+    return (float) (Math.round((prezzo) * 100.0) / 100.0);
+  }
 
 
-		public int getSaldo() {
-			return saldo;
-		}
+  public void setPrezzo(float f) {
+    this.prezzo = f;
+  }
 
 
-		public void setSaldo(int saldo) {
-			this.saldo = saldo;
-		}
+  public int getSaldo() {
+    return saldo;
+  }
 
 
-		public LocalDate getData_uscita() {
-			return data_uscita;
-		}
+  public void setSaldo(int saldo) {
+    this.saldo = saldo;
+  }
 
 
-		public void setData_uscita(LocalDate data_uscita) {
-			this.data_uscita = data_uscita;
-		}
+  public LocalDate getData_uscita() {
+    return data_uscita;
+  }
 
 
-		public float getVoto() {
-			return voto;
-		}
+  public void setData_uscita(LocalDate data_uscita) {
+    this.data_uscita = data_uscita;
+  }
 
 
-		public void setVoto(float voto) {
-			this.voto = voto;
-		}
+  public float getVoto() {
+    return voto;
+  }
 
 
-		public String getDescrizione() {
-			return descrizione;
-		}
+  public void setVoto(float voto) {
+    this.voto = voto;
+  }
 
 
-		public void setDescrizione(String descrizione) {
-			this.descrizione = descrizione;
-		}
+  public String getDescrizione() {
+    return descrizione;
+  }
 
 
-		public float getPeso() {
-			return peso;
-		}
+  public void setDescrizione(String descrizione) {
+    this.descrizione = descrizione;
+  }
 
 
-		public void setPeso(float peso) {
-			this.peso = peso;
-		}
+  public float getPeso() {
+    return peso;
+  }
 
 
-		public int getQuantita() {
-			return quantita;
-		}
+  public void setPeso(float peso) {
+    this.peso = peso;
+  }
 
 
-		public void setQuantita(int quantita) {
-			this.quantita = quantita;
-		}
+  public int getQuantita() {
+    return quantita;
+  }
 
 
-		@Override
-		public String toString() {
-			return nome + " (" + id + "), " + prezzo + " " + quantita + ". " + descrizione+" " +voto+
-					" "+peso+" "+saldo+" "+data_uscita;
-		}
+  public void setQuantita(int quantita) {
+    this.quantita = quantita;
+  }
 
-	}
+
+  @Override
+  public String toString() {
+    return nome + " (" + id + "), " + prezzo + " " + quantita + ". " + descrizione + " " + voto + " " + peso + " " + saldo + " " + data_uscita;
+  }
+
+}
 
 

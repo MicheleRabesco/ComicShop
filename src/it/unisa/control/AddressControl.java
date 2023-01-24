@@ -15,48 +15,46 @@ import it.unisa.model.*;
  */
 @WebServlet("/AddressControl")
 public class AddressControl extends HttpServlet {
-	private static final long serialVersionUID = 1L;
-	static AddressDAO AddressDAO = new AddressDAO();
+  private static final long serialVersionUID = 1L;
+  static AddressDAO AddressDAO = new AddressDAO();
 
-	/**
-	 * @see HttpServlet#HttpServlet()
-	 */
-	public AddressControl() {
-		super();
+  /**
+   * @see HttpServlet#HttpServlet()
+   */
+  public AddressControl() {
+    super();
 
-	}
+  }
 
-	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse
-	 *      response)
-	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {
-		String via = request.getParameter("via");
-		int numero_civico = Integer.parseInt(request.getParameter("numero_civico"));
-		int cap = Integer.parseInt(request.getParameter("cap"));
-		String citta = request.getParameter("citta");
-		String provincia = request.getParameter("provincia");
-		AddressBean address = new AddressBean();
-		UserBean user = (UserBean) request.getSession().getAttribute("currentSessionUser");
-		address.setVia(via);
-		address.setNumero_civico(numero_civico);
-		address.setCap(cap);
-		address.setCitta(citta);
-		address.setProvincia(provincia);
-		AddressDAO.doSave(user, address);
-		response.sendRedirect("CheckoutPage.jsp");
+  /**
+   * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+   */
+  protected void doGet(HttpServletRequest request, HttpServletResponse response)
+      throws ServletException, IOException {
+    String via = request.getParameter("via");
+    int numero_civico = Integer.parseInt(request.getParameter("numero_civico"));
+    int cap = Integer.parseInt(request.getParameter("cap"));
+    String citta = request.getParameter("citta");
+    String provincia = request.getParameter("provincia");
+    AddressBean address = new AddressBean();
+    UserBean user = (UserBean) request.getSession().getAttribute("currentSessionUser");
+    address.setVia(via);
+    address.setNumero_civico(numero_civico);
+    address.setCap(cap);
+    address.setCitta(citta);
+    address.setProvincia(provincia);
+    AddressDAO.doSave(user, address);
+    response.sendRedirect("CheckoutPage.jsp");
 
-	}
+  }
 
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
-	 *      response)
-	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {
+  /**
+   * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+   */
+  protected void doPost(HttpServletRequest request, HttpServletResponse response)
+      throws ServletException, IOException {
 
-		doGet(request, response);
-	}
+    doGet(request, response);
+  }
 
 }

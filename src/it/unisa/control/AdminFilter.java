@@ -17,51 +17,47 @@ import it.unisa.model.UserBean;
 /**
  * Servlet Filter implementation class AdminFilter
  */
-@WebFilter(urlPatterns = { "/Admin/*" ,"/Catalogo/*","/OrderArchive/*"})
+@WebFilter(urlPatterns = {"/Admin/*", "/Catalogo/*", "/OrderArchive/*"})
 public class AdminFilter implements Filter {
 
-    /**
-     * Default constructor. 
-     */
-    public AdminFilter() {
-        
+  /**
+   * Default constructor.
+   */
+  public AdminFilter() {
+
+  }
+
+  /**
+   * @see Filter#destroy()
+   */
+  public void destroy() {
+
+  }
+
+  /**
+   * @see Filter#doFilter(ServletRequest, ServletResponse, FilterChain)
+   */
+  public void doFilter(ServletRequest req, ServletResponse resp, FilterChain chain)
+      throws IOException, ServletException {
+    HttpServletRequest request = (HttpServletRequest) req;
+    HttpServletResponse response = (HttpServletResponse) resp;
+    HttpSession session = request.getSession(false);
+    UserBean user = (UserBean) session.getAttribute("currentSessionUser");
+    if (session == null || session.getAttribute("currentSessionUser") == null) {
+      response.sendRedirect(request.getContextPath() + "/AccessDenied.jsp?");
+    } else if (!(user.IsAdmin())) {
+      response.sendRedirect(request.getContextPath() + "/AccessDenied.jsp?");
+    } else {
+      // pass the request along the filter chain
+      chain.doFilter(request, response);
     }
+  }
 
-	/**
-	 * @see Filter#destroy()
-	 */
-	public void destroy() {
-		
-	}
+  /**
+   * @see Filter#init(FilterConfig)
+   */
+  public void init(FilterConfig fConfig) throws ServletException {
 
-	/**
-	 * @see Filter#doFilter(ServletRequest, ServletResponse, FilterChain)
-	 */
-	public void doFilter(ServletRequest req, ServletResponse resp, FilterChain chain) throws IOException, ServletException {
-		HttpServletRequest request = (HttpServletRequest) req;
-		HttpServletResponse response = (HttpServletResponse) resp;
-		HttpSession session = request.getSession(false);
-		UserBean user=(UserBean) session.getAttribute("currentSessionUser");
-		if(session == null || session.getAttribute("currentSessionUser") == null)
-		{
-			response.sendRedirect(request.getContextPath()+"/AccessDenied.jsp?"); 
-		}
-		else if(!(user.IsAdmin()))
-		{ 
-			response.sendRedirect(request.getContextPath()+"/AccessDenied.jsp?"); 
-		}
-		
-		else {
-		// pass the request along the filter chain
-		chain.doFilter(request, response);
-		}
-	}
-
-	/**
-	 * @see Filter#init(FilterConfig)
-	 */
-	public void init(FilterConfig fConfig) throws ServletException {
-		
-	}
+  }
 
 }

@@ -2,16 +2,13 @@ package it.unisa.model;
 
 
 
-/** Associates a catalog Item with a specific order by
- *  keeping track of the number ordered and the total price.
- *  Also provides some convenience methods to get at the
- *  CatalogItem data without extracting the CatalogItem
- *  separately.
- *  <P>
- *  Taken from Core Servlets and JavaServer Pages 2nd Edition
- *  from Prentice Hall and Sun Microsystems Press,
- *  http://www.coreservlets.com/.
- *  &copy; 2003 Marty Hall; may be freely used or adapted.
+/**
+ * Associates a catalog Item with a specific order by keeping track of the number ordered and the
+ * total price. Also provides some convenience methods to get at the CatalogItem data without
+ * extracting the CatalogItem separately.
+ * <P>
+ * Taken from Core Servlets and JavaServer Pages 2nd Edition from Prentice Hall and Sun Microsystems
+ * Press, http://www.coreservlets.com/. &copy; 2003 Marty Hall; may be freely used or adapted.
  */
 
 public class ItemOrder {
@@ -24,7 +21,7 @@ public class ItemOrder {
   }
 
   public ProductBean getItem() {
-    return(item);
+    return (item);
   }
 
   protected void setItem(ProductBean item) {
@@ -32,24 +29,24 @@ public class ItemOrder {
   }
 
   public int getId() {
-    return(getItem().getId());
+    return (getItem().getId());
   }
 
   public String getDescrizione() {
-    return(getItem().getDescrizione());
+    return (getItem().getDescrizione());
   }
 
   public String getNome() {
-	  return(getItem().getNome());
+    return (getItem().getNome());
   }
-  
-  
+
+
   public float getPrezzo() {
-    return (float) ((Math.round(getItem().getPrezzo()*100.0))/100.0);
+    return (float) ((Math.round(getItem().getPrezzo() * 100.0)) / 100.0);
   }
-  
+
   public int getNumItems() {
-    return(numItems);
+    return (numItems);
   }
 
   public void setNumItems(int n) {
@@ -65,6 +62,6 @@ public class ItemOrder {
   }
 
   public float getTotalCost() {
-    return (float) (Math.round(getNumItems() * getPrezzo()*100)/100.00);
+    return (float) (Math.round(getNumItems() * getPrezzo() * 100) / 100.00);
   }
 }

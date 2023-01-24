@@ -9,11 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d841be6c-b30e-46e3-9553-5476539edc8b" name="Changes" comment="Update">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/META-INF/context.xml" beforeDir="false" afterPath="$PROJECT_DIR$/resources/META-INF/context.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/webapp/META-INF/context.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/webapp/META-INF/context.xml" afterDir="false" />
-    </list>
+    <list default="true" id="d841be6c-b30e-46e3-9553-5476539edc8b" name="Changes" comment="Update" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -203,7 +199,7 @@
       <workItem from="1674501212688" duration="1403000" />
       <workItem from="1674502655144" duration="656000" />
       <workItem from="1674503355724" duration="1098000" />
-      <workItem from="1674512622473" duration="807000" />
+      <workItem from="1674512622473" duration="1467000" />
     </task>
     <servers />
   </component>

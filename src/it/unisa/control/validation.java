@@ -22,74 +22,72 @@ import javax.sql.DataSource;
  */
 @WebServlet("/validation")
 public class validation extends HttpServlet {
-	private static final long serialVersionUID = 1L;
+  private static final long serialVersionUID = 1L;
 
-	/**
-	 * @see HttpServlet#HttpServlet()
-	 */
-	public validation() {
-		super();
-		// TODO Auto-generated constructor stub
-	}
+  /**
+   * @see HttpServlet#HttpServlet()
+   */
+  public validation() {
+    super();
+    // TODO Auto-generated constructor stub
+  }
 
-	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse
-	 *      response)
-	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {
-		doPost(request, response);
-	}
+  /**
+   * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+   */
+  protected void doGet(HttpServletRequest request, HttpServletResponse response)
+      throws ServletException, IOException {
+    doPost(request, response);
+  }
 
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
-	 *      response)
-	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {
-		response.setContentType("text/json");
-		// no need to continue if there is no value in the POST username
-		if (request.getParameter("username") == null) {
-			return;
-		}
-		DataSource ds = null;
-		ResultSet rs = null;
-		try {
-			Context initCtx = new InitialContext();
-			Context envCtx = (Context) initCtx.lookup("java:comp/env");
+  /**
+   * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+   */
+  protected void doPost(HttpServletRequest request, HttpServletResponse response)
+      throws ServletException, IOException {
+    response.setContentType("text/json");
+    // no need to continue if there is no value in the POST username
+    if (request.getParameter("username") == null) {
+      return;
+    }
+    DataSource ds = null;
+    ResultSet rs = null;
+    try {
+      Context initCtx = new InitialContext();
+      Context envCtx = (Context) initCtx.lookup("java:comp/env");
 
-			ds = (DataSource) envCtx.lookup("jdbc/comicshop");
+      ds = (DataSource) envCtx.lookup("jdbc/comicshop");
 
-		} catch (NamingException e) {
-			System.out.println("Error:" + e.getMessage());
-		}
+    } catch (NamingException e) {
+      System.out.println("Error:" + e.getMessage());
+    }
 
-		PreparedStatement preparedStatement = null;
-		String query = "SELECT *  FROM utente WHERE username = ?";
-		try {
-			Connection connection = ds.getConnection();
-			preparedStatement = connection.prepareStatement(query);
-			preparedStatement.setString(1, request.getParameter("username"));
-			rs = preparedStatement.executeQuery();
+    PreparedStatement preparedStatement = null;
+    String query = "SELECT *  FROM utente WHERE username = ?";
+    try {
+      Connection connection = ds.getConnection();
+      preparedStatement = connection.prepareStatement(query);
+      preparedStatement.setString(1, request.getParameter("username"));
+      rs = preparedStatement.executeQuery();
 
-			boolean exists = (rs.next());
-			Gson gson = new Gson();
-			String jsonInString = gson.toJson(exists);
-			PrintWriter out = response.getWriter();
-			response.setContentType("application/json");
-			response.setCharacterEncoding("UTF-8");
-			out.print(jsonInString);
-			out.flush();
-			System.out.println(preparedStatement);
-			connection.close();
-			preparedStatement.close();
-			rs.close();
-			
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+      boolean exists = (rs.next());
+      Gson gson = new Gson();
+      String jsonInString = gson.toJson(exists);
+      PrintWriter out = response.getWriter();
+      response.setContentType("application/json");
+      response.setCharacterEncoding("UTF-8");
+      out.print(jsonInString);
+      out.flush();
+      System.out.println(preparedStatement);
+      connection.close();
+      preparedStatement.close();
+      rs.close();
 
-	}
+    } catch (SQLException e) {
+      // TODO Auto-generated catch block
+      e.printStackTrace();
+    }
+
+  }
 
 }

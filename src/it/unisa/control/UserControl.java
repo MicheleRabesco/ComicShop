@@ -19,54 +19,52 @@ import it.unisa.model.*;
  */
 @WebServlet("/UserControl")
 public class UserControl extends HttpServlet {
-	private static final long serialVersionUID = 1L;
-	static UserDAO UserDAO = new UserDAO();
+  private static final long serialVersionUID = 1L;
+  static UserDAO UserDAO = new UserDAO();
 
-	/**
-	 * @see HttpServlet#HttpServlet()
-	 */
-	public UserControl() {
-		super();
+  /**
+   * @see HttpServlet#HttpServlet()
+   */
+  public UserControl() {
+    super();
 
-	}
+  }
 
-	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse
-	 *      response)
-	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {
+  /**
+   * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+   */
+  protected void doGet(HttpServletRequest request, HttpServletResponse response)
+      throws ServletException, IOException {
 
-		String username = request.getParameter("usr");
-		String nome = request.getParameter("nome");
-		String cognome = request.getParameter("cogn");
-		String email = request.getParameter("email");
-		String password = request.getParameter("pwd");
-		String num_telefono = request.getParameter("num_tel");
-		String paese_residenza = request.getParameter("paese");
-		LocalDate data_nascita = LocalDate.parse(request.getParameter("data"));
-		UserBean user = new UserBean();
-		user.setUsername(username);
-		user.setNome(nome);
-		user.setCognome(cognome);
-		user.setEmail(email);
-		user.setPassword(password);
-		user.setNum_tel(num_telefono);
-		user.setPaese_residenza(paese_residenza);
-		user.setData_nascita(data_nascita);
-		UserDAO.doSave(user);
+    String username = request.getParameter("usr");
+    String nome = request.getParameter("nome");
+    String cognome = request.getParameter("cogn");
+    String email = request.getParameter("email");
+    String password = request.getParameter("pwd");
+    String num_telefono = request.getParameter("num_tel");
+    String paese_residenza = request.getParameter("paese");
+    LocalDate data_nascita = LocalDate.parse(request.getParameter("data"));
+    UserBean user = new UserBean();
+    user.setUsername(username);
+    user.setNome(nome);
+    user.setCognome(cognome);
+    user.setEmail(email);
+    user.setPassword(password);
+    user.setNum_tel(num_telefono);
+    user.setPaese_residenza(paese_residenza);
+    user.setData_nascita(data_nascita);
+    UserDAO.doSave(user);
 
-		response.sendRedirect("loginPage.jsp");
-	}
+    response.sendRedirect("loginPage.jsp");
+  }
 
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
-	 *      response)
-	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {
+  /**
+   * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+   */
+  protected void doPost(HttpServletRequest request, HttpServletResponse response)
+      throws ServletException, IOException {
 
-		doGet(request, response);
-	}
+    doGet(request, response);
+  }
 
 }

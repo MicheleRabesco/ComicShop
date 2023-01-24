@@ -18,39 +18,42 @@ import it.unisa.model.ProductModel;
  */
 @WebServlet("/Catalogo")
 public class Catalogo extends HttpServlet {
-	private static final long serialVersionUID = 1L;
-	static ProductModel model = new ProductDAO();
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
-    public Catalogo() {
-        super();
-     
+  private static final long serialVersionUID = 1L;
+  static ProductModel model = new ProductDAO();
+
+  /**
+   * @see HttpServlet#HttpServlet()
+   */
+  public Catalogo() {
+    super();
+
+  }
+
+  /**
+   * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+   */
+  protected void doGet(HttpServletRequest request, HttpServletResponse response)
+      throws ServletException, IOException {
+    HttpSession session = request.getSession(false);
+
+    try {
+      session.removeAttribute("products");
+      session.setAttribute("products", model.doRetrieveAll("id"));
+    } catch (SQLException e) {
+      System.out.println("Error:" + e.getMessage());
     }
 
-	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
-	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		HttpSession session = request.getSession(false);
+    RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/Admin/Catalogo.jsp");
+    dispatcher.include(request, response);
+  }
 
-		try {
-			session.removeAttribute("products");
-			session.setAttribute("products", model.doRetrieveAll("id"));
-		} catch (SQLException e) {
-			System.out.println("Error:" + e.getMessage());
-		}
-		
-		RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/Admin/Catalogo.jsp");
-		dispatcher.include(request, response);
-	}
+  /**
+   * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+   */
+  protected void doPost(HttpServletRequest request, HttpServletResponse response)
+      throws ServletException, IOException {
 
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-	
-		doGet(request, response);
-	}
+    doGet(request, response);
+  }
 
 }

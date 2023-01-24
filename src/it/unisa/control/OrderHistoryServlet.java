@@ -21,40 +21,42 @@ import it.unisa.model.UserBean;
  */
 @WebServlet("/OrderHistory")
 public class OrderHistoryServlet extends HttpServlet {
-	private static final long serialVersionUID = 1L;
-	
-       
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
-    public OrderHistoryServlet() {
-        super();
-        
-    }
+  private static final long serialVersionUID = 1L;
 
-	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
-	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
-		HttpSession session = request.getSession(false);
-		UserBean user = (UserBean) session.getAttribute("currentSessionUser");
-		OrderDAO orderDAO = new OrderDAO();
-		List<OrderBean> ordini = new ArrayList<OrderBean>();
-		ordini = orderDAO.getAllOrdersByUser(user);
-		session.setAttribute("ordini", ordini);
-		RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/OrderHistory.jsp");
-		dispatcher.include(request, response);
-		
-		
-	}
 
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
-		doGet(request, response);
-	}
+  /**
+   * @see HttpServlet#HttpServlet()
+   */
+  public OrderHistoryServlet() {
+    super();
+
+  }
+
+  /**
+   * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+   */
+  protected void doGet(HttpServletRequest request, HttpServletResponse response)
+      throws ServletException, IOException {
+
+    HttpSession session = request.getSession(false);
+    UserBean user = (UserBean) session.getAttribute("currentSessionUser");
+    OrderDAO orderDAO = new OrderDAO();
+    List<OrderBean> ordini = new ArrayList<OrderBean>();
+    ordini = orderDAO.getAllOrdersByUser(user);
+    session.setAttribute("ordini", ordini);
+    RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/OrderHistory.jsp");
+    dispatcher.include(request, response);
+
+
+  }
+
+  /**
+   * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+   */
+  protected void doPost(HttpServletRequest request, HttpServletResponse response)
+      throws ServletException, IOException {
+
+    doGet(request, response);
+  }
 
 }

@@ -15,54 +15,53 @@ import it.unisa.model.UserBean;
 
 @WebServlet("/Ordine")
 public class OrdineControl extends HttpServlet {
-	private static final long serialVersionUID = 1L;
+  private static final long serialVersionUID = 1L;
 
-	static OrderDAO OrderDao = new OrderDAO();
-static ProductDAO productDAO= new ProductDAO();
-	public OrdineControl() {
-		super();
-	}
+  static OrderDAO OrderDao = new OrderDAO();
+  static ProductDAO productDAO = new ProductDAO();
 
-	protected void doGet(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {
+  public OrdineControl() {
+    super();
+  }
 
-		Cart cart = (Cart) request.getSession().getAttribute("cart");
-		OrderDAO order = new OrderDAO();
+  protected void doGet(HttpServletRequest request, HttpServletResponse response)
+      throws ServletException, IOException {
 
-		String action = request.getParameter("action");
+    Cart cart = (Cart) request.getSession().getAttribute("cart");
+    OrderDAO order = new OrderDAO();
 
-
-
-		if (action != null) {
-			if (action.equalsIgnoreCase("CompletaOrdine")) {
-				HttpSession session = request.getSession(true);
-				order.doSave((UserBean) session.getAttribute("currentSessionUser"), request.getParameter("indirizzo"),
-						request.getParameter("pagamento"), cart);
-				session.setAttribute("cart", new Cart());
-				response.sendRedirect("./Homepage.jsp");
-
-			}
-
-			else if (action.equalsIgnoreCase("mostradettagli")) {
-				HttpSession session = request.getSession(true);
-				String id = String.valueOf(request.getParameter("codice"));
-				LinkedList<ContentBean> products=order.getContentByOrderId(id);
-				session.removeAttribute("ordine");
-				session.setAttribute("ordine", order.getOrderById(id));
-				session.setAttribute("products", products);
-				request.getRequestDispatcher("orderDetails.jsp").forward(request, response);
-			}
-			
-			
-
-		}
-	}
+    String action = request.getParameter("action");
 
 
 
-	protected void doPost(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {
-		doGet(request, response);
-	}
+    if (action != null) {
+      if (action.equalsIgnoreCase("CompletaOrdine")) {
+        HttpSession session = request.getSession(true);
+        order.doSave((UserBean) session.getAttribute("currentSessionUser"),
+            request.getParameter("indirizzo"), request.getParameter("pagamento"), cart);
+        session.setAttribute("cart", new Cart());
+        response.sendRedirect("./Homepage.jsp");
+
+      } else if (action.equalsIgnoreCase("mostradettagli")) {
+        HttpSession session = request.getSession(true);
+        String id = String.valueOf(request.getParameter("codice"));
+        LinkedList<ContentBean> products = order.getContentByOrderId(id);
+        session.removeAttribute("ordine");
+        session.setAttribute("ordine", order.getOrderById(id));
+        session.setAttribute("products", products);
+        request.getRequestDispatcher("orderDetails.jsp").forward(request, response);
+      }
+
+
+
+    }
+  }
+
+
+
+  protected void doPost(HttpServletRequest request, HttpServletResponse response)
+      throws ServletException, IOException {
+    doGet(request, response);
+  }
 
 }
